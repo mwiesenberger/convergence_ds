@@ -7,7 +7,7 @@ tables for the field-aligned derivative.
 
 ## Installation
 
-The notebooks depend on the pandas and numpy packages and the simplesimdb module. The
+The notebooks depend on the `pandas` and `numpy` packages and the `simplesimdb` module. The
 latter can be obtained via
 ```bash
 git clone https://github.com/mwiesenberger/simplesimdb
@@ -15,10 +15,11 @@ cd simplesimdb
 pip install -e .
 ```
 
-The other dependency is the Feltor code repository [Feltor](https://github.com/feltor-dev/feltor).
-It is recommended to keep feltor and this repository next to each other.
+The other dependency is the [Feltor](https://github.com/feltor-dev/feltor) code repository.
+Follow the quick-start guide to install.
+It is recommended to keep Feltor and this repository next to each other.
 If not, you need to set the `FELTOR_PATH` environment variable in order for
-the `execute.sh` script to find and compile the `ds_t` code.
+the `execute.sh` script to compile and execute the `path/to/feltor/inc/geometries/ds_t` code.
 
 Lastly, we need jupyter to run the notebooks.
 
