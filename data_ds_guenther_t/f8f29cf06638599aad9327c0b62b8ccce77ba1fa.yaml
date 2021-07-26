@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 20
+Ny: 20
+Nz: 10
+# Type mx (10) and my (10)
+# You typed
+mx: 10
+my: 10
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: linear
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.000435648
+# DS: Computing all points took: 0.368158
+# DS: Multiplication PI    took: 0.667724
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.326737 #  	-0.000812191
+    backward:          0.326781 #  	0.000567664
+    forward2:          0.155563 #  	-0.000659225
+    backward2:         0.155707 #  	0.000821275
+    centered:          0.0789171 #  	-0.000245468
+    dss:               0.0658176 #  	-0.000131054
+    centered_bc_along: 0.0789171 #  	-0.000245468
+    dss_bc_along:      0.0658176 #  	-0.000131054
+    divForward:        0.426953 #  	-3.85927e-17
+    divBackward:       0.426083 #  	4.06711e-17
+    divCentered:       0.172978 #  	-5.8721e-19
+    divDirectForward:  0.326537 #  	-0.000812191
+    divDirectBackward: 0.326581 #  	0.000567664
+    divDirectCentered: 0.078853 #  	-1.6288e-06
+    forwardLap:        0.100776 #  	5.12139e-15
+    backwardLap:       0.100776 #  	5.12139e-15
+    centeredLap:       0.237975 #  	5.1484e-15
+    directLap:         0.0660283 #  	-0.000135739
+    directLap_bc_along: 0.0660283 #  	-0.000135739
+# of cg iterations 	25	# took 	0.0243773s
+    invForwardLap:     0.000983133 #  	3.44309
+# of cg iterations 	25	# took 	0.0237399s
+    invBackwardLap:    0.000983133 #  	3.44309
+# of cg iterations 	21	# took 	0.0212964s
+    invCenteredLap:    0.00241931 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.00050784
+# DS: Computing all points took: 0.322345
+# DS: Multiplication PI    took: 0.653693
+    directLapST:       0.0659839 #  	-0.00013373

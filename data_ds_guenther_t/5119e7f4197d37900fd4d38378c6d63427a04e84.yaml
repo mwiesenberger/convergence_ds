@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 64
+Ny: 64
+Nz: 80
+# Type mx (10) and my (10)
+# You typed
+mx: 10
+my: 10
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: cubic
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.00036192
+# DS: Computing all points took: 2.94479
+# DS: Multiplication PI    took: 13.8861
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.0413289 #  	-3.50032e-05
+    backward:          0.041329 #  	3.07893e-05
+    forward2:          0.00291487 #  	-1.04223e-05
+    backward2:         0.00290487 #  	1.34916e-05
+    centered:          0.00127877 #  	-4.22011e-06
+    dss:               0.000986541 #  	-1.23092e-05
+    centered_bc_along: 0.00127877 #  	-4.22011e-06
+    dss_bc_along:      0.000986541 #  	-1.23092e-05
+    divForward:        2.16959 #  	7.19581e-16
+    divBackward:       2.16977 #  	-7.02488e-16
+    divCentered:       0.167018 #  	1.13179e-17
+    divDirectForward:  0.0413036 #  	-3.50032e-05
+    divDirectBackward: 0.0413037 #  	3.07893e-05
+    divDirectCentered: 0.00127767 #  	-1.7237e-08
+    forwardLap:        0.0839017 #  	-8.96058e-15
+    backwardLap:       0.0839017 #  	-8.96058e-15
+    centeredLap:       0.166735 #  	-8.9551e-15
+    directLap:         0.000990624 #  	-2.89392e-07
+    directLap_bc_along: 0.000990624 #  	-2.89392e-07
+# of cg iterations 	70	# took 	3.59268s
+    invForwardLap:     0.000378806 #  	3.44309
+# of cg iterations 	70	# took 	3.59712s
+    invBackwardLap:    0.000378806 #  	3.44309
+# of cg iterations 	53	# took 	2.70128s
+    invCenteredLap:    0.00137781 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.000358848
+# DS: Computing all points took: 2.82563
+# DS: Multiplication PI    took: 13.8437
+    directLapST:       0.00098955 #  	-2.32439e-07

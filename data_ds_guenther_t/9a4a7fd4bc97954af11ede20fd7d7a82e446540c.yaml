@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 80
+Ny: 80
+Nz: 40
+# Type mx (10) and my (10)
+# You typed
+mx: 1
+my: 1
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: linear
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.000370688
+# DS: Computing all points took: 1.1915
+# DS: Multiplication PI    took: 0.0296471
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.0831677 #  	-0.000199917
+    backward:          0.0832923 #  	0.000181799
+    forward2:          0.0163363 #  	-0.000237441
+    backward2:         0.0172062 #  	0.000248759
+    centered:          0.00793061 #  	-1.7476e-05
+    dss:               0.0696869 #  	-0.000142371
+    centered_bc_along: 0.00793061 #  	-1.7476e-05
+    dss_bc_along:      0.0696869 #  	-0.000142371
+    divForward:        1.96861 #  	-8.00383e-19
+    divBackward:       1.96163 #  	2.4952e-18
+    divCentered:       1.21205 #  	-8.10866e-21
+    divDirectForward:  0.0831168 #  	-0.000199917
+    divDirectBackward: 0.0832413 #  	0.000181799
+    divDirectCentered: 0.00792381 #  	-7.4268e-07
+    forwardLap:        1.10231 #  	2.4764e-14
+    backwardLap:       1.10231 #  	2.4764e-14
+    centeredLap:       1.10527 #  	2.47556e-14
+    directLap:         0.0697186 #  	-0.000131032
+    directLap_bc_along: 0.0697186 #  	-0.000131032
+# of cg iterations 	63	# took 	0.622965s
+    invForwardLap:     0.0019368 #  	3.44309
+# of cg iterations 	63	# took 	0.663339s
+    invBackwardLap:    0.0019368 #  	3.44309
+# of cg iterations 	46	# took 	0.436809s
+    invCenteredLap:    0.00311793 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.000361088
+# DS: Computing all points took: 0.965331
+# DS: Multiplication PI    took: 0.0300306
+    directLapST:       0.0697214 #  	-0.000130818

@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 40
+Ny: 40
+Nz: 40
+# Type mx (10) and my (10)
+# You typed
+mx: 10
+my: 10
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: dg
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.00036208
+# DS: Computing all points took: 1.24841
+# DS: Multiplication PI    took: 3.95214
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.0825984 #  	-7.37901e-05
+    backward:          0.0825986 #  	5.69728e-05
+    forward2:          0.0105707 #  	-1.9773e-05
+    backward2:         0.0105484 #  	3.17652e-05
+    centered:          0.00510249 #  	-1.68247e-05
+    dss:               0.00393097 #  	-1.23051e-05
+    centered_bc_along: 0.00510249 #  	-1.68247e-05
+    dss_bc_along:      0.00393097 #  	-1.23051e-05
+    divForward:        0.179063 #  	-2.85045e-16
+    divBackward:       0.181007 #  	2.40664e-16
+    divCentered:       0.111353 #  	-2.02067e-17
+    divDirectForward:  0.0825478 #  	-7.37901e-05
+    divDirectBackward: 0.082548 #  	5.69728e-05
+    divDirectCentered: 0.00509811 #  	-9.19603e-08
+    forwardLap:        0.0907094 #  	1.17649e-14
+    backwardLap:       0.0907094 #  	1.17649e-14
+    centeredLap:       0.0916018 #  	1.17713e-14
+    directLap:         0.00394721 #  	-1.15284e-06
+    directLap_bc_along: 0.00394721 #  	-1.15284e-06
+# of cg iterations 	42	# took 	0.419598s
+    invForwardLap:     4.48075e-05 #  	3.44309
+# of cg iterations 	42	# took 	0.394893s
+    invBackwardLap:    4.48075e-05 #  	3.44309
+# of cg iterations 	35	# took 	0.324561s
+    invCenteredLap:    0.000152857 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.00035808
+# DS: Computing all points took: 1.18641
+# DS: Multiplication PI    took: 3.9516
+    directLapST:       0.00394295 #  	-9.27038e-07

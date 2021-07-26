@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 64
+Ny: 64
+Nz: 80
+# Type mx (10) and my (10)
+# You typed
+mx: 1
+my: 1
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: dg
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.000372864
+# DS: Computing all points took: 0.664874
+# DS: Multiplication PI    took: 0.0378303
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.0413289 #  	-3.50032e-05
+    backward:          0.041329 #  	3.07893e-05
+    forward2:          0.00291488 #  	-1.04226e-05
+    backward2:         0.00290488 #  	1.34907e-05
+    centered:          0.00127878 #  	-4.22011e-06
+    dss:               0.00099154 #  	-1.23092e-05
+    centered_bc_along: 0.00127878 #  	-4.22011e-06
+    dss_bc_along:      0.00099154 #  	-1.23092e-05
+    divForward:        8.08935 #  	6.64546e-18
+    divBackward:       8.09462 #  	-8.14184e-18
+    divCentered:       6.02816 #  	8.68971e-19
+    divDirectForward:  0.0413036 #  	-3.50032e-05
+    divDirectBackward: 0.0413036 #  	3.07893e-05
+    divDirectCentered: 0.00127768 #  	-1.7237e-08
+    forwardLap:        5.58259 #  	-8.94787e-15
+    backwardLap:       5.58259 #  	-8.94787e-15
+    centeredLap:       5.57496 #  	-8.95318e-15
+    directLap:         0.000995608 #  	-2.89392e-07
+    directLap_bc_along: 0.000995608 #  	-2.89392e-07
+# of cg iterations 	90	# took 	1.89058s
+    invForwardLap:     0.00349526 #  	3.44309
+# of cg iterations 	90	# took 	1.89365s
+    invBackwardLap:    0.00349526 #  	3.44309
+# of cg iterations 	73	# took 	1.49841s
+    invCenteredLap:    0.00649047 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.000416672
+# DS: Computing all points took: 0.525492
+# DS: Multiplication PI    took: 0.035264
+    directLapST:       0.00099454 #  	-2.3244e-07

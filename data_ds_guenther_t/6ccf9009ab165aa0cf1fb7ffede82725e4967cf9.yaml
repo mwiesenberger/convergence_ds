@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 10
+Ny: 10
+Nz: 5
+# Type mx (10) and my (10)
+# You typed
+mx: 1
+my: 1
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: cubic
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.00038928
+# DS: Computing all points took: 0.0461063
+# DS: Multiplication PI    took: 0.00145162
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.623505 #  	-0.000735228
+    backward:          0.623527 #  	-0.0001508
+    forward2:          0.525783 #  	-0.000771358
+    backward2:         0.525795 #  	0.000396365
+    centered:          0.277113 #  	-0.000805505
+    dss:               0.192963 #  	-1.33337e-05
+    centered_bc_along: 0.277113 #  	-0.000805505
+    dss_bc_along:      0.192963 #  	-1.33337e-05
+    divForward:        0.762751 #  	-6.44814e-18
+    divBackward:       0.781006 #  	-2.0163e-18
+    divCentered:       0.429602 #  	-4.38208e-18
+    divDirectForward:  0.623123 #  	-0.000735228
+    divDirectBackward: 0.623145 #  	-0.0001508
+    divDirectCentered: 0.276967 #  	-7.95732e-05
+    forwardLap:        0.307553 #  	2.14112e-15
+    backwardLap:       0.307553 #  	2.14112e-15
+    centeredLap:       0.553845 #  	2.169e-15
+    directLap:         0.193654 #  	-4.89535e-05
+    directLap_bc_along: 0.193654 #  	-4.89535e-05
+# of cg iterations 	22	# took 	0.00488643s
+    invForwardLap:     0.00229523 #  	3.44309
+# of cg iterations 	22	# took 	0.00490522s
+    invBackwardLap:    0.00229523 #  	3.44309
+# of cg iterations 	19	# took 	0.00438445s
+    invCenteredLap:    0.00540569 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.000391616
+# DS: Computing all points took: 0.0338597
+# DS: Multiplication PI    took: 0.00143085
+    directLapST:       0.193494 #  	-4.14564e-05

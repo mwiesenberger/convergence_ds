@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 20
+Ny: 20
+Nz: 10
+# Type mx (10) and my (10)
+# You typed
+mx: 1
+my: 1
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: linear
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.0003608
+# DS: Computing all points took: 0.117768
+# DS: Multiplication PI    took: 0.00196784
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.326763 #  	-0.000711657
+    backward:          0.326985 #  	0.00043827
+    forward2:          0.156354 #  	-0.000691968
+    backward2:         0.156751 #  	0.000794322
+    centered:          0.0793217 #  	-0.000259906
+    dss:               0.067502 #  	-9.87616e-05
+    centered_bc_along: 0.0793217 #  	-0.000259906
+    dss_bc_along:      0.067502 #  	-9.87616e-05
+    divForward:        0.688473 #  	-3.43009e-18
+    divBackward:       0.699911 #  	1.69068e-18
+    divCentered:       0.429236 #  	-3.19366e-18
+    divDirectForward:  0.326563 #  	-0.000711657
+    divDirectBackward: 0.326784 #  	0.00043827
+    divDirectCentered: 0.0792586 #  	-1.60442e-05
+    forwardLap:        0.348318 #  	5.12344e-15
+    backwardLap:       0.348318 #  	5.12344e-15
+    centeredLap:       0.388575 #  	5.09857e-15
+    directLap:         0.067707 #  	-0.000102838
+    directLap_bc_along: 0.067707 #  	-0.000102838
+# of cg iterations 	29	# took 	0.0130849s
+    invForwardLap:     0.0013015 #  	3.44309
+# of cg iterations 	29	# took 	0.0129072s
+    invBackwardLap:    0.0013015 #  	3.44309
+# of cg iterations 	25	# took 	0.0108395s
+    invCenteredLap:    0.00257617 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.000453024
+# DS: Computing all points took: 0.101773
+# DS: Multiplication PI    took: 0.00253936
+    directLapST:       0.0676633 #  	-0.00010027

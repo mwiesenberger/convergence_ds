@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 16
+Ny: 16
+Nz: 10
+# Type mx (10) and my (10)
+# You typed
+mx: 1
+my: 1
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: dg
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.000385184
+# DS: Computing all points took: 0.0790487
+# DS: Multiplication PI    took: 0.00210976
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.325732 #  	-0.000358657
+    backward:          0.325737 #  	0.000101612
+    forward2:          0.153656 #  	-0.000164012
+    backward2:         0.153553 #  	0.000269651
+    centered:          0.0779866 #  	-0.000251739
+    dss:               0.0581327 #  	-1.26251e-05
+    centered_bc_along: 0.0779866 #  	-0.000251739
+    dss_bc_along:      0.0581327 #  	-1.26251e-05
+    divForward:        1.17077 #  	6.44004e-18
+    divBackward:       1.19368 #  	-9.98071e-18
+    divCentered:       0.813861 #  	-1.44601e-18
+    divDirectForward:  0.325533 #  	-0.000358657
+    divDirectBackward: 0.325537 #  	0.000101612
+    divDirectCentered: 0.0779277 #  	-7.86731e-06
+    forwardLap:        0.72131 #  	-1.81549e-15
+    backwardLap:       0.72131 #  	-1.81549e-15
+    centeredLap:       0.69429 #  	-1.8176e-15
+    directLap:         0.0583658 #  	-1.6885e-05
+    directLap_bc_along: 0.0583658 #  	-1.6885e-05
+# of cg iterations 	28	# took 	0.0134869s
+    invForwardLap:     0.00151509 #  	3.44309
+# of cg iterations 	28	# took 	0.0136038s
+    invBackwardLap:    0.00151509 #  	3.44309
+# of cg iterations 	25	# took 	0.0118733s
+    invCenteredLap:    0.00247038 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.000390336
+# DS: Computing all points took: 0.0606999
+# DS: Multiplication PI    took: 0.00182198
+    directLapST:       0.0583069 #  	-1.38402e-05

@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 160
+Ny: 160
+Nz: 80
+# Type mx (10) and my (10)
+# You typed
+mx: 1
+my: 1
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: linear
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.000368864
+# DS: Computing all points took: 3.90043
+# DS: Multiplication PI    took: 0.127816
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.041802 #  	-0.000100412
+    backward:          0.0419029 #  	9.5877e-05
+    forward2:          0.00907111 #  	-0.000126149
+    backward2:         0.00983623 #  	0.000128992
+    centered:          0.00440828 #  	-4.38067e-06
+    dss:               0.0969645 #  	-0.00014799
+    centered_bc_along: 0.00440828 #  	-4.38067e-06
+    dss_bc_along:      0.0969645 #  	-0.00014799
+    divForward:        3.87855 #  	9.88395e-19
+    divBackward:       3.86824 #  	-1.80598e-18
+    divCentered:       2.08077 #  	-7.30497e-19
+    divDirectForward:  0.0417764 #  	-0.000100412
+    divDirectBackward: 0.0418772 #  	9.5877e-05
+    divDirectCentered: 0.00440506 #  	-1.77843e-07
+    forwardLap:        1.89419 #  	5.07767e-14
+    backwardLap:       1.89419 #  	5.07767e-14
+    centeredLap:       1.89928 #  	5.08022e-14
+    directLap:         0.0970068 #  	-0.000135863
+    directLap_bc_along: 0.0970068 #  	-0.000135863
+# of cg iterations 	102	# took 	7.86905s
+    invForwardLap:     0.00200932 #  	3.44309
+# of cg iterations 	102	# took 	7.80742s
+    invBackwardLap:    0.00200932 #  	3.44309
+# of cg iterations 	71	# took 	5.14795s
+    invCenteredLap:    0.00479054 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.00038464
+# DS: Computing all points took: 3.49992
+# DS: Multiplication PI    took: 0.138001
+    directLapST:       0.097008 #  	-0.000135809

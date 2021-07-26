@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 26
+Ny: 26
+Nz: 20
+# Type mx (10) and my (10)
+# You typed
+mx: 1
+my: 1
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: dg
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.000498112
+# DS: Computing all points took: 0.153232
+# DS: Multiplication PI    took: 0.00516714
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.164724 #  	-0.000160839
+    backward:          0.164725 #  	9.41814e-05
+    forward2:          0.0406145 #  	-4.38037e-05
+    backward2:         0.0405662 #  	8.72409e-05
+    centered:          0.0202133 #  	-6.64115e-05
+    dss:               0.0154602 #  	-1.23156e-05
+    centered_bc_along: 0.0202133 #  	-6.64115e-05
+    dss_bc_along:      0.0154602 #  	-1.23156e-05
+    divForward:        2.06199 #  	2.04481e-19
+    divBackward:       2.0654 #  	-1.4983e-18
+    divCentered:       1.46637 #  	5.04e-20
+    divDirectForward:  0.164623 #  	-0.000160839
+    divDirectBackward: 0.164624 #  	9.41814e-05
+    divDirectCentered: 0.0201964 #  	-7.23684e-07
+    forwardLap:        1.35612 #  	2.73635e-15
+    backwardLap:       1.35612 #  	2.73635e-15
+    centeredLap:       1.33566 #  	2.73101e-15
+    directLap:         0.0155237 #  	-4.5347e-06
+    directLap_bc_along: 0.0155237 #  	-4.5347e-06
+# of cg iterations 	39	# took 	0.0579268s
+    invForwardLap:     0.00303666 #  	3.44309
+# of cg iterations 	39	# took 	0.0577636s
+    invBackwardLap:    0.00303666 #  	3.44309
+# of cg iterations 	32	# took 	0.0464874s
+    invCenteredLap:    0.00335257 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.000411872
+# DS: Computing all points took: 0.130986
+# DS: Multiplication PI    took: 0.00596173
+    directLapST:       0.0155072 #  	-3.66258e-06

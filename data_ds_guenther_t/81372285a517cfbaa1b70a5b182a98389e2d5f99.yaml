@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 40
+Ny: 40
+Nz: 40
+# Type mx (10) and my (10)
+# You typed
+mx: 1
+my: 1
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: dg
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.000399008
+# DS: Computing all points took: 0.308279
+# DS: Multiplication PI    took: 0.014217
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.0825984 #  	-7.37901e-05
+    backward:          0.0825987 #  	5.69728e-05
+    forward2:          0.0105707 #  	-1.98047e-05
+    backward2:         0.0105483 #  	3.17771e-05
+    centered:          0.00510251 #  	-1.68247e-05
+    dss:               0.00393176 #  	-1.23051e-05
+    centered_bc_along: 0.00510251 #  	-1.68247e-05
+    dss_bc_along:      0.00393176 #  	-1.23051e-05
+    divForward:        4.12548 #  	4.07802e-19
+    divBackward:       4.1317 #  	-9.08045e-18
+    divCentered:       2.79353 #  	2.88509e-20
+    divDirectForward:  0.0825478 #  	-7.37901e-05
+    divDirectBackward: 0.0825481 #  	5.69728e-05
+    divDirectCentered: 0.00509812 #  	-9.19603e-08
+    forwardLap:        2.57694 #  	1.17593e-14
+    backwardLap:       2.57694 #  	1.17593e-14
+    centeredLap:       2.57328 #  	1.17624e-14
+    directLap:         0.003948 #  	-1.15284e-06
+    directLap_bc_along: 0.003948 #  	-1.15284e-06
+# of cg iterations 	60	# took 	0.322858s
+    invForwardLap:     0.00667288 #  	3.44309
+# of cg iterations 	60	# took 	0.326147s
+    invBackwardLap:    0.00667288 #  	3.44309
+# of cg iterations 	47	# took 	0.250859s
+    invCenteredLap:    0.00768465 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.000439264
+# DS: Computing all points took: 0.260786
+# DS: Multiplication PI    took: 0.0119148
+    directLapST:       0.00394374 #  	-9.27032e-07

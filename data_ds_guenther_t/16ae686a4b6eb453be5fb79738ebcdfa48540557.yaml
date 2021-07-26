@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 80
+Ny: 80
+Nz: 40
+# Type mx (10) and my (10)
+# You typed
+mx: 10
+my: 10
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: linear
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.000431904
+# DS: Computing all points took: 5.05754
+# DS: Multiplication PI    took: 12.0372
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.0830869 #  	-0.000193533
+    backward:          0.0830894 #  	0.000175302
+    forward2:          0.0143987 #  	-0.000178904
+    backward2:         0.014507 #  	0.000191184
+    centered:          0.00535835 #  	-1.75324e-05
+    dss:               0.0788619 #  	-0.000134998
+    centered_bc_along: 0.00535835 #  	-1.75324e-05
+    dss_bc_along:      0.0788619 #  	-0.000134998
+    divForward:        1.07103 #  	-2.00295e-16
+    divBackward:       1.07077 #  	1.99425e-16
+    divCentered:       0.163243 #  	-4.26795e-19
+    divDirectForward:  0.083036 #  	-0.000193533
+    divDirectBackward: 0.0830385 #  	0.000175302
+    divDirectCentered: 0.00535309 #  	-8.00043e-07
+    forwardLap:        0.0887295 #  	2.477e-14
+    backwardLap:       0.0887295 #  	2.477e-14
+    centeredLap:       0.162614 #  	2.47789e-14
+    directLap:         0.0788942 #  	-0.000123872
+    directLap_bc_along: 0.0788942 #  	-0.000123872
+# of cg iterations 	55	# took 	1.72753s
+    invForwardLap:     0.000621173 #  	3.44309
+# of cg iterations 	55	# took 	1.72675s
+    invBackwardLap:    0.000621173 #  	3.44309
+# of cg iterations 	37	# took 	1.15299s
+    invCenteredLap:    0.00156549 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.000389376
+# DS: Computing all points took: 4.69238
+# DS: Multiplication PI    took: 11.6305
+    directLapST:       0.0788962 #  	-0.000123698

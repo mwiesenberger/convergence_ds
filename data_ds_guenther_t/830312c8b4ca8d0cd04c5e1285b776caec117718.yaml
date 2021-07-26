@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 40
+Ny: 40
+Nz: 20
+# Type mx (10) and my (10)
+# You typed
+mx: 10
+my: 10
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: linear
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.000389632
+# DS: Computing all points took: 1.39414
+# DS: Multiplication PI    took: 3.1061
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.16539 #  	-0.000392424
+    backward:          0.165407 #  	0.000323018
+    forward2:          0.043075 #  	-0.000341523
+    backward2:         0.043247 #  	0.000390614
+    centered:          0.0207324 #  	-6.77882e-05
+    dss:               0.0538984 #  	-0.000130681
+    centered_bc_along: 0.0207324 #  	-6.77882e-05
+    dss_bc_along:      0.0538984 #  	-0.000130681
+    divForward:        0.562893 #  	-1.36211e-16
+    divBackward:       0.561694 #  	1.35506e-16
+    divCentered:       0.162801 #  	-1.24618e-19
+    divDirectForward:  0.165288 #  	-0.000392424
+    divDirectBackward: 0.165306 #  	0.000323018
+    divDirectCentered: 0.0207131 #  	-2.10066e-06
+    forwardLap:        0.0856254 #  	1.17277e-14
+    backwardLap:       0.0856254 #  	1.17277e-14
+    centeredLap:       0.167044 #  	1.1724e-14
+    directLap:         0.053933 #  	-0.000122983
+    directLap_bc_along: 0.053933 #  	-0.000122983
+# of cg iterations 	32	# took 	0.165912s
+    invForwardLap:     0.000780312 #  	3.44309
+# of cg iterations 	32	# took 	0.152222s
+    invBackwardLap:    0.000780312 #  	3.44309
+# of cg iterations 	28	# took 	0.12453s
+    invCenteredLap:    0.00168762 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.000384768
+# DS: Computing all points took: 1.29901
+# DS: Multiplication PI    took: 3.13989
+    directLapST:       0.0539348 #  	-0.000122403

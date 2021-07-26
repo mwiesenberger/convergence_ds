@@ -1,0 +1,50 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 26
+Ny: 26
+Nz: 20
+# Type mx (10) and my (10)
+# You typed
+mx: 10
+my: 10
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: dg
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.00038496
+# DS: Computing all points took: 0.561383
+# DS: Multiplication PI    took: 1.5808
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.164724 #  	-0.000160839
+    backward:          0.164725 #  	9.41814e-05
+    forward2:          0.0406145 #  	-4.37616e-05
+    backward2:         0.0405664 #  	8.72148e-05
+    centered:          0.0202134 #  	-6.64115e-05
+    dss:               0.0154594 #  	-1.23156e-05
+    centered_bc_along: 0.0202134 #  	-6.64115e-05
+    dss_bc_along:      0.0154594 #  	-1.23156e-05
+    divForward:        0.179582 #  	2.36584e-16
+    divBackward:       0.17862 #  	-2.65122e-16
+    divCentered:       0.052069 #  	-1.70162e-17
+    divDirectForward:  0.164623 #  	-0.000160839
+    divDirectBackward: 0.164624 #  	9.41814e-05
+    divDirectCentered: 0.0201965 #  	-7.23683e-07
+    forwardLap:        0.0422169 #  	2.73266e-15
+    backwardLap:       0.0422169 #  	2.73266e-15
+    centeredLap:       0.0698592 #  	2.72281e-15
+    directLap:         0.0155229 #  	-4.5347e-06
+    directLap_bc_along: 0.0155229 #  	-4.5347e-06
+# of cg iterations 	32	# took 	0.0926997s
+    invForwardLap:     0.000151454 #  	3.44309
+# of cg iterations 	32	# took 	0.0903989s
+    invBackwardLap:    0.000151454 #  	3.44309
+# of cg iterations 	28	# took 	0.0651293s
+    invCenteredLap:    0.000575565 #  	3.44309
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.000377216
+# DS: Computing all points took: 0.48274
+# DS: Multiplication PI    took: 1.5483
+    directLapST:       0.0155064 #  	-3.66252e-06

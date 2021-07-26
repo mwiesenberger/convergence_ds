@@ -1,0 +1,90 @@
+# Test the parallel derivative DS in cylindrical coordinates for circular flux surfaces with DIR and NEU boundary conditions.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 26
+Ny: 26
+Nz: 20
+# Type mx (10) and my (10)
+# You typed
+mx: 10
+my: 10
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: dg
+# Create parallel Derivative!
+# DS: High order grid gen  took: 0.000390144
+# DS: Computing all points took: 0.500488
+# DS: Multiplication PI    took: 1.60889
+# TEST NEU Boundary conditions!
+# TEST ADJOINT derivatives do unfortunately not fulfill Neumann BC!
+Neumann:
+    forward:           0.161739
+    backward:          0.161739
+    forward2:          0.0465689
+    backward2:         0.0465689
+    centered:          0.0226758
+    dss:               0.036718
+    centered_bc_along: 0.0222112
+    dss_bc_along:      0.040015
+    divForward:        0.166987
+    divBackward:       0.166987
+    divCentered:       0.0375859
+    divDirectForward:  0.161723
+    divDirectBackward: 0.161723
+    divDirectCentered: 0.0226727
+    forwardLap:        0.0956139
+    backwardLap:       0.0956139
+    centeredLap:       0.136149
+    directLap:         0.0367394
+    directLap_bc_along: 0.0400325
+# of cg iterations 	32	# took 	0.126244s
+    invForwardLap:     0.000326567
+# of cg iterations 	32	# took 	0.117491s
+    invBackwardLap:    0.000326567
+# of cg iterations 	28	# took 	0.0821301s
+    invCenteredLap:    0.00100874
+# Reconstruct parallel derivative!
+# DS: High order grid gen  took: 0.000319488
+# DS: Computing all points took: 0.487021
+# DS: Multiplication PI    took: 1.62731
+# TEST DIR Boundary conditions!
+Dirichlet: 
+    forward:           0.16155
+    backward:          0.16155
+    forward2:          0.0450013
+    backward2:         0.0450013
+    centered:          0.0222969
+    dss:               0.0689589
+    centered_bc_along: 0.0215806
+    dss_bc_along:      0.0400677
+    divForward:        0.16678
+    divBackward:       0.16678
+    divCentered:       0.0374395
+    divDirectForward:  0.161533
+    divDirectBackward: 0.161533
+    divDirectCentered: 0.0222935
+    forwardLap:        0.107815
+    backwardLap:       0.107815
+    centeredLap:       0.140387
+    directLap:         0.0689744
+    directLap_bc_along: 0.0400823
+# of cg iterations 	38	# took 	0.109564s
+    invForwardLap:     0.000418456
+# of cg iterations 	38	# took 	0.0920512s
+    invBackwardLap:    0.000418456
+# of cg iterations 	34	# took 	0.078126s
+    invCenteredLap:    0.00102099
+# TEST FIELDALIGNED EVALUATION of a Gaussian
+# took 1.50519s
+# Norm Centered Derivative 0.0984831 (compare with that of ds_mpit)
+# TEST STAGGERED GRID DERIVATIVE
+# DS: High order grid gen  took: 0.000412064
+# DS: Computing all points took: 0.43308
+# DS: Multiplication PI    took: 1.61101
+NeumannST:
+    forward:           0.0227984
+    backward:          0.0227984
+DirichletST:
+    forward:           0.0219806
+    backward:          0.0219806
