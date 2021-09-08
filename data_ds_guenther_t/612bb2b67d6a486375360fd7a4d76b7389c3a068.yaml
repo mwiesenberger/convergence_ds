@@ -13,38 +13,46 @@ my: 10
 # You typed
 method: linear
 # Create parallel Derivative!
-# DS: High order grid gen  took: 0.00037568
-# DS: Computing all points took: 20.6211
-# DS: Multiplication PI    took: 58.0942
+# DS: High order grid gen  took: 0.00117343
+# DS: Computing all points took: 28.7942
+# DS: Multiplication PI    took: 51.5199
 # TEST Guenther (No Boundary conditions)!
 Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
-    forward:           0.0417235 #  	-9.5824e-05
-    backward:          0.0417299 #  	9.12601e-05
-    forward2:          0.00749432 #  	-9.28464e-05
-    backward2:         0.0075999 #  	9.59783e-05
-    centered:          0.00146902 #  	-4.39525e-06
-    dss:               0.113866 #  	-0.000137524
-    centered_bc_along: 0.00146902 #  	-4.39525e-06
-    dss_bc_along:      0.113866 #  	-0.000137524
-    divForward:        2.12955 #  	-4.42593e-16
-    divBackward:       2.12879 #  	4.41956e-16
-    divCentered:       0.164246 #  	-2.01304e-18
-    divDirectForward:  0.0416979 #  	-9.5824e-05
-    divDirectBackward: 0.0417043 #  	9.12601e-05
-    divDirectCentered: 0.00146745 #  	-1.92546e-07
-    forwardLap:        0.0968701 #  	5.07714e-14
-    backwardLap:       0.0968701 #  	5.07714e-14
-    centeredLap:       0.16351 #  	5.07816e-14
-    directLap:         0.113913 #  	-0.000125505
-    directLap_bc_along: 0.113913 #  	-0.000125505
-# of cg iterations 	90	# took 	24.8155s
-    invForwardLap:     0.000417384 #  	3.44309
-# of cg iterations 	90	# took 	24.8079s
-    invBackwardLap:    0.000417384 #  	3.44309
-# of cg iterations 	62	# took 	16.8664s
-    invCenteredLap:    0.00137726 #  	3.44309
+    forward:           0.0417069
+    forward_vol:                       -0.000499555
+    backward:          0.041715
+    backward_vol:                      0.000487706
+    forward2:          0.00735339
+    forward2_vol:                      -0.000488373
+    backward2:         0.00748001
+    backward2_vol:                     0.000508184
+    centered:          0.00146878
+    centered_vol:                      -5.92448e-06
+    dss:               0.113866
+    dss_vol:                           -0.000828304
+    centered_bc_along: 0.00146878
+    centered_bc_along_vol:             -5.92448e-06
+    dss_bc_along:      0.113866
+    dss_bc_along_vol:                  -0.000828304
+    divForward:        0.0417731
+    divForward_vol:                    -0.000366448
+    divBackward:       0.0417849
+    divBackward_vol:                   0.00036434
+    divCentered:       0.00148058
+    divCentered_vol:                   -1.05395e-06
+    directLap:         0.113916
+    directLap_vol:                     -0.000754414
+#Number of BICGSTABl iterations: 33
+#Took                          : 119.757
+    invCenteredLap:    0.000450442
+    invCenteredLap_vol:                20.9437
 # TEST STAGGERED GRID DERIVATIVE
-# DS: High order grid gen  took: 0.00051216
-# DS: Computing all points took: 19.1444
-# DS: Multiplication PI    took: 53.3362
-    directLapST:       0.113914 #  	-0.000125459
+# DS: High order grid gen  took: 0.00061678
+# DS: Computing all points took: 28.7964
+# DS: Multiplication PI    took: 51.7207
+    centeredST:        0.00142905 #  	-2.80139e-06
+# TEST VOLUME FORMS
+volume_error:
+    minus:             2.26173e-16
+    plus:              2.26173e-16
+    Inv:               0.101376

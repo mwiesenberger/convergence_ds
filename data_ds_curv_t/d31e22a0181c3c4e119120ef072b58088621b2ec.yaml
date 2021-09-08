@@ -1,0 +1,41 @@
+# Test DS on flux grid (No Boundary conditions)!
+# Type n(3), Nx(8), Ny(80), Nz(20)
+# Type multipleX (1) and multipleY (100)!
+# You typed
+n:  3
+Nx: 8
+Ny: 10
+Nz: 5
+mx: 1
+my: 10
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: linear
+# Constructing Grid...
+# Constructing Fieldlines...
+# Construction took 3.85855s
+Flux:
+    forward:           0.773299
+    forward_vol:                       0.125695
+    backward:          0.772498
+    backward_vol:                      -0.739287
+    centered:          0.503457
+    centered_vol:                      -0.306796
+    dss:               0.388357
+    dss_vol:                           -0.000235866
+    divForward:        0.812635
+    divForward_vol:                    2.40079e-05
+    divBackward:       0.815591
+    divBackward_vol:                   -0.00330186
+    divCentered:       0.549874
+    divCentered_vol:                   -0.00163893
+    directLap:         0.421583
+    directLap_vol:                     -3.33336e-05
+#Number of BICGSTABl iterations: 9
+#Took                          : 0.00996957
+    invCenteredLap:    0.00647364
+    invCenteredLap_vol:                -0.22089
+# TEST VOLUME FORMS
+volume_error:
+    minus:             0.000528866
+    plus:              0.000660532

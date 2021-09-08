@@ -13,78 +13,62 @@ my: 10
 # You typed
 method: dg
 # Create parallel Derivative!
-# DS: High order grid gen  took: 0.000528448
-# DS: Computing all points took: 0.182179
-# DS: Multiplication PI    took: 0.562299
+# DS: High order grid gen  took: 0.0004704
+# DS: Computing all points took: 0.23917
+# DS: Multiplication PI    took: 0.539905
 # TEST NEU Boundary conditions!
 # TEST ADJOINT derivatives do unfortunately not fulfill Neumann BC!
 Neumann:
-    forward:           0.319986
-    backward:          0.319986
-    forward2:          0.162375
-    backward2:         0.162375
-    centered:          0.0821056
-    dss:               0.115753
-    centered_bc_along: 0.0798759
-    dss_bc_along:      0.10611
-    divForward:        0.319329
-    divBackward:       0.319329
-    divCentered:       0.0801642
-    divDirectForward:  0.319954
-    divDirectBackward: 0.319954
-    divDirectCentered: 0.0820958
-    forwardLap:        0.246717
-    backwardLap:       0.246717
-    centeredLap:       0.326647
-    directLap:         0.115827
-    directLap_bc_along: 0.106168
-# of cg iterations 	25	# took 	0.0188425s
-    invForwardLap:     0.00108116
-# of cg iterations 	25	# took 	0.0187476s
-    invBackwardLap:    0.00108116
-# of cg iterations 	22	# took 	0.0163746s
-    invCenteredLap:    0.00246486
+    forward:           0.319957
+    backward:          0.319957
+    forward2:          0.162306
+    backward2:         0.162306
+    centered:          0.0820908
+    centered_bc_along: 0.0798568
+    dss:               0.115732
+    dss_bc_along:      0.106087
+    divForward:        0.320003
+    divBackward:       0.320003
+    divCentered:       0.082138
+    directLap:         0.115741
+    directLap_bc_along: 0.10608
+#Number of BICGSTABl iterations: 7
+#Took                          : 0.0229237
+    invCenteredLap:    0.00115074
 # Reconstruct parallel derivative!
-# DS: High order grid gen  took: 0.0003584
-# DS: Computing all points took: 0.170047
-# DS: Multiplication PI    took: 0.5438
+# DS: High order grid gen  took: 0.000477184
+# DS: Computing all points took: 0.213438
+# DS: Multiplication PI    took: 0.537743
 # TEST DIR Boundary conditions!
 Dirichlet: 
-    forward:           0.319633
-    backward:          0.319633
-    forward2:          0.160924
-    backward2:         0.160924
-    centered:          0.0804658
-    dss:               0.129279
-    centered_bc_along: 0.0783729
-    dss_bc_along:      0.103635
-    divForward:        0.318958
-    divBackward:       0.318958
-    divCentered:       0.0800309
-    divDirectForward:  0.319601
-    divDirectBackward: 0.319601
-    divDirectCentered: 0.0804554
-    forwardLap:        0.251108
-    backwardLap:       0.251108
-    centeredLap:       0.327024
-    directLap:         0.129339
-    directLap_bc_along: 0.103685
-# of cg iterations 	31	# took 	0.0230927s
-    invForwardLap:     0.00107082
-# of cg iterations 	31	# took 	0.0230534s
-    invBackwardLap:    0.00107082
-# of cg iterations 	27	# took 	0.0200181s
-    invCenteredLap:    0.00243916
+    forward:           0.319604
+    backward:          0.319604
+    forward2:          0.160855
+    backward2:         0.160855
+    centered:          0.0804506
+    centered_bc_along: 0.0783522
+    dss:               0.129262
+    dss_bc_along:      0.103617
+    divForward:        0.31965
+    divBackward:       0.31965
+    divCentered:       0.0805
+    directLap:         0.12927
+    directLap_bc_along: 0.103601
+#Number of BICGSTABl iterations: 9
+#Took                          : 0.0286744
+    invCenteredLap:    0.00109141
 # TEST FIELDALIGNED EVALUATION of a Gaussian
-# took 0.31296s
-# Norm Centered Derivative 0.0923831 (compare with that of ds_mpit)
+# took 0.300908s
+# Norm Centered Derivative 0.0924308 (compare with that of ds_mpit)
+# took 0.00747232s
+# Norm Centered Derivative 0.0924715 (compare with that of ds_mpit)
 # TEST STAGGERED GRID DERIVATIVE
-# DS: High order grid gen  took: 0.000357152
-# DS: Computing all points took: 0.173167
-# DS: Multiplication PI    took: 0.535771
+# DS: High order grid gen  took: 0.000471072
+# DS: Computing all points took: 0.185852
+# DS: Multiplication PI    took: 0.538033
 NeumannST:
-    forward:           0.0800876
-    backward:          0.0800876
+    forward:           0.0800843
+    backward:          0.0800843
 DirichletST:
-    forward:           0.0788569
-    backward:          0.0788569
+    forward:           0.0788537
+    backward:          0.0788537
