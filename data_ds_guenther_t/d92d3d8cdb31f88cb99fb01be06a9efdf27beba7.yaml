@@ -7,70 +7,70 @@ Ny: 16
 Nz: 10
 # Type mx (10) and my (10)
 # You typed
-mx: 1
-my: 1
+mx: 5
+my: 5
 # Type method (dg, nearest, linear, cubic) 
 # You typed
 method: dg
 # Create parallel Derivative!
 # Interpolation method: "dg" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 0.00240716
-# DS: Computing all points took: 0.0820346
-# DS: Multiplication PI    took: 0.00406757
+# DS: High order grid gen  took: 0.00317962
+# DS: Computing all points took: 0.117288
+# DS: Multiplication PI    took: 0.11699
 # TEST Guenther (No Boundary conditions)!
 Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
-    forward:           0.3256
+    forward:           0.325599
     forward_vol:                       -0.000200814
-    backward:          0.325617
+    backward:          0.325616
     backward_vol:                      0.00010037
     forward2:          0.153232
-    forward2_vol:                      -1.26803e-05
+    forward2_vol:                      -1.41364e-05
     backward2:         0.153205
-    backward2_vol:                     0.000176249
-    centered:          0.0779366
+    backward2_vol:                     0.000177142
+    centered:          0.077936
     centered_vol:                      -5.0222e-05
-    dss:               0.0579564
+    dss:               0.0579578
     dss_vol:                           -9.28154e-06
-    centered_bc_along: 0.0779366
+    centered_bc_along: 0.077936
     centered_bc_along_vol:             -5.0222e-05
-    dss_bc_along:      0.0579564
+    dss_bc_along:      0.0579578
     dss_bc_along_vol:                  -9.28154e-06
-    divForward:        0.32609
-    divForward_vol:                    -3.69199e-09
-    divBackward:       0.326166
-    divBackward_vol:                   9.77523e-10
-    divCentered:       0.0786728
-    divCentered_vol:                   -1.35724e-09
-    directLap:         0.0575595
-    directLap_vol:                     -7.84663e-10
+    divForward:        0.326089
+    divForward_vol:                    -3.68369e-09
+    divBackward:       0.326165
+    divBackward_vol:                   9.64916e-10
+    divCentered:       0.0786722
+    divCentered_vol:                   -1.35939e-09
+    directLap:         0.0575609
+    directLap_vol:                     -7.82486e-10
 #Number of BICGSTABl iterations: 24
-#Took                          : 0.0265276
-    invCenteredLap:    0.000572168
+#Took                          : 0.0267064
+    invCenteredLap:    0.00057217
     invCenteredLap_vol:                3.44309
 # TEST TOTAL VARIATION DIMINISHING
 # mass before: 20.944
 # mass after   20.944
-    Tp_mass_err:   -5.82231e-09
+    Tp_mass_err:   -5.79685e-09
 # l2 norm before: 6.02518
 # l2 norm after   6.02518
-    Tp_l2_err:   -6.81205e-07
+    Tp_l2_err:   1.99135e-08
 # variation before: 188.651
 # error variation before: 0.000986085
-# variation after   188.655
-# error variation after : 0.00148717
-    Tp_TV_err: 2.14862e-05
+# variation after   188.656
+# error variation after : 0.00131469
+    Tp_TV_err: 2.91082e-05
 # TEST STAGGERED GRID DERIVATIVE
 # Interpolation method: "dg" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 0.000491411
-# DS: Computing all points took: 0.0394533
-# DS: Multiplication PI    took: 0.00334798
-    centeredST:        0.0778831
-    centeredST_vol:                    -0.000141065
-    directLapST:       0.0580499
-    directLapST_vol:                   -7.76281e-10
+# DS: High order grid gen  took: 0.000548537
+# DS: Computing all points took: 0.0685807
+# DS: Multiplication PI    took: 0.112676
+    centeredST:        0.0778837
+    centeredST_vol:                    -0.000141152
+    directLapST:       0.0580513
+    directLapST_vol:                   -7.74041e-10
 # TEST VOLUME FORMS
 volume_error:
     minus:             2.43119e-11
     plus:              2.20375e-11
     grid:              7.59519e-09
-    Inv:               0.875407
+    Inv:               0.0314352

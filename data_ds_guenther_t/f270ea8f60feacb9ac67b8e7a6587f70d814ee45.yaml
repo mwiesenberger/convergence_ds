@@ -13,60 +13,64 @@ my: 1
 # You typed
 method: linear
 # Create parallel Derivative!
-# DS: High order grid gen  took: 0.000393216
-# DS: Computing all points took: 0.192635
-# DS: Multiplication PI    took: 0.000860064
+# Interpolation method: "linear" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.0023725
+# DS: Computing all points took: 0.0600844
+# DS: Multiplication PI    took: 0.00665817
 # TEST Guenther (No Boundary conditions)!
 Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
-    forward:           0.624087
-    forward_vol:                       -9.36646e-06
-    backward:          0.624215
-    backward_vol:                      -0.000352696
-    forward2:          0.525452
-    forward2_vol:                      -0.000286142
-    backward2:         0.525762
-    backward2_vol:                     0.000487837
-    centered:          0.277993
-    centered_vol:                      -0.000181031
-    dss:               0.192165
-    dss_vol:                           5.76252e-05
-    centered_bc_along: 0.277993
-    centered_bc_along_vol:             -0.000181031
-    dss_bc_along:      0.192165
-    dss_bc_along_vol:                  5.76252e-05
-    divForward:        0.624848
-    divForward_vol:                    0.000378453
-    divBackward:       0.625129
-    divBackward_vol:                   -0.000376672
-    divCentered:       0.279584
-    divCentered_vol:                   8.90874e-07
-    directLap:         0.190934
-    directLap_vol:                     6.01094e-05
-#Number of BICGSTABl iterations: 5
-#Took                          : 0.00620413
-    invCenteredLap:    0.00194232
-    invCenteredLap_vol:                3.44315
+    forward:           0.623324
+    forward_vol:                       0.000208846
+    backward:          0.623596
+    backward_vol:                      -0.000573624
+    forward2:          0.524631
+    forward2_vol:                      0.000261407
+    backward2:         0.524759
+    backward2_vol:                     -6.57618e-05
+    centered:          0.278471
+    centered_vol:                      -0.000182389
+    dss:               0.193503
+    dss_vol:                           9.32379e-05
+    centered_bc_along: 0.278471
+    centered_bc_along_vol:             -0.000182389
+    dss_bc_along:      0.193503
+    dss_bc_along_vol:                  9.32379e-05
+    divForward:        0.624085
+    divForward_vol:                    0.000597248
+    divBackward:       0.624512
+    divBackward_vol:                   -0.000598244
+    divCentered:       0.280059
+    divCentered_vol:                   -4.9807e-07
+    directLap:         0.192273
+    directLap_vol:                     9.576e-05
+#Number of BICGSTABl iterations: 3
+#Took                          : 0.00165484
+    invCenteredLap:    0.00194951
+    invCenteredLap_vol:                3.44319
 # TEST TOTAL VARIATION DIMINISHING
 # mass before: 20.944
-# mass after   20.9726
-    Tp_mass_err:   0.00136758
+# mass after   20.9581
+    Tp_mass_err:   0.000676785
 # l2 norm before: 6.02518
-# l2 norm after   6.01553
-    Tp_l2_err:   -0.00160295
+# l2 norm after   6.01079
+    Tp_l2_err:   -0.00238952
 # variation before: 185.057
-# variation after   181.19
-    Tp_TV_err: -0.0208927
+# error variation before: 0.00259857
+# variation after   178.458
+# error variation after : 0.16881
+    Tp_TV_err: -0.0356603
 # TEST STAGGERED GRID DERIVATIVE
-# DS: High order grid gen  took: 0.00053456
-# DS: Computing all points took: 0.123177
-# DS: Multiplication PI    took: 0.000795104
-    centeredST:        0.279551
-    centeredST_vol:                    -0.000492701
-    directLapST:       0.192103
-    directLapST_vol:                   5.99282e-05
+# Interpolation method: "linear" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.000498518
+# DS: Computing all points took: 0.0305669
+# DS: Multiplication PI    took: 0.00378257
+    centeredST:        0.280413
+    centeredST_vol:                    -0.000496518
+    directLapST:       0.192157
+    directLapST_vol:                   2.93713e-05
 # TEST VOLUME FORMS
 volume_error:
-    minus:             2.87579e-10
-    plus:              2.87579e-10
-    grid:              5.02309e-09
-    Inv:               0.412852
+    minus:             3.18351e-10
+    plus:              3.1782e-10
+    grid:              3.43041e-09
+    Inv:               0.184867

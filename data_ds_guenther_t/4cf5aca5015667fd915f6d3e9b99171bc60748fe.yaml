@@ -1,0 +1,76 @@
+# Test the parallel derivative DS in cylindrical coordinates for the guenther flux surfaces. Fieldlines do not cross boundaries.
+# Type n (3), Nx(20), Ny(20), Nz(20)
+# You typed
+n:  3
+Nx: 20
+Ny: 20
+Nz: 10
+# Type mx (10) and my (10)
+# You typed
+mx: 1
+my: 1
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: linear
+# Create parallel Derivative!
+# Interpolation method: "linear" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.0023701
+# DS: Computing all points took: 0.12427
+# DS: Multiplication PI    took: 0.015687
+# TEST Guenther (No Boundary conditions)!
+Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
+    forward:           0.325868
+    forward_vol:                       9.25239e-05
+    backward:          0.325962
+    backward_vol:                      -0.000193206
+    forward2:          0.153383
+    forward2_vol:                      0.000313463
+    backward2:         0.153373
+    backward2_vol:                     -0.000151559
+    centered:          0.0785185
+    centered_vol:                      -5.03409e-05
+    dss:               0.058646
+    dss_vol:                           8.44376e-05
+    centered_bc_along: 0.0785185
+    centered_bc_along_vol:             -5.03409e-05
+    dss_bc_along:      0.058646
+    dss_bc_along_vol:                  8.44376e-05
+    divForward:        0.326357
+    divForward_vol:                    0.000293584
+    divBackward:       0.32651
+    divBackward_vol:                   -0.000293914
+    divCentered:       0.0792479
+    divCentered_vol:                   -1.65361e-07
+    directLap:         0.0582563
+    directLap_vol:                     9.37993e-05
+#Number of BICGSTABl iterations: 3
+#Took                          : 0.00818501
+    invCenteredLap:    0.000577319
+    invCenteredLap_vol:                3.44318
+# TEST TOTAL VARIATION DIMINISHING
+# mass before: 20.944
+# mass after   20.9473
+    Tp_mass_err:   0.000161464
+# l2 norm before: 6.02518
+# l2 norm after   6.0214
+    Tp_l2_err:   -0.000627703
+# variation before: 188.646
+# error variation before: 0.00062288
+# variation after   185.639
+# error variation after : 0.0916531
+    Tp_TV_err: -0.015942
+# TEST STAGGERED GRID DERIVATIVE
+# Interpolation method: "linear" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.000477618
+# DS: Computing all points took: 0.0592231
+# DS: Multiplication PI    took: 0.0125597
+    centeredST:        0.0791294
+    centeredST_vol:                    -0.000142062
+    directLapST:       0.0581282
+    directLapST_vol:                   2.74911e-05
+# TEST VOLUME FORMS
+volume_error:
+    minus:             2.31955e-11
+    plus:              2.28146e-11
+    grid:              6.44215e-09
+    Inv:               0.110113
