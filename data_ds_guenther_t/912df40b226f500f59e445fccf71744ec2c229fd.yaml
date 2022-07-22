@@ -14,9 +14,9 @@ my: 1
 method: dg
 # Create parallel Derivative!
 # Interpolation method: "dg" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 0.00253316
-# DS: Computing all points took: 0.0613569
-# DS: Multiplication PI    took: 0.00177252
+# DS: High order grid gen  took: 0.0023645
+# DS: Computing all points took: 0.0618663
+# DS: Multiplication PI    took: 0.00176407
 # TEST Guenther (No Boundary conditions)!
 Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
     forward:           0.623238
@@ -44,7 +44,7 @@ Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
     directLap:         0.191221
     directLap_vol:                     6.23384e-08
 #Number of BICGSTABl iterations: 21
-#Took                          : 0.00820909
+#Took                          : 0.00832759
     invCenteredLap:    0.00194518
     invCenteredLap_vol:                3.44309
 # TEST TOTAL VARIATION DIMINISHING
@@ -61,9 +61,9 @@ Guenther : #rel_Error rel_Volume_integral(should be zero for div and Lap)
     Tp_TV_err: 0.000431162
 # TEST STAGGERED GRID DERIVATIVE
 # Interpolation method: "dg" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 0.000500382
-# DS: Computing all points took: 0.030699
-# DS: Multiplication PI    took: 0.00160579
+# DS: High order grid gen  took: 0.000503536
+# DS: Computing all points took: 0.0317001
+# DS: Multiplication PI    took: 0.00156047
     centeredST:        0.276796
     centeredST_vol:                    -0.00048512
     directLapST:       0.192392
