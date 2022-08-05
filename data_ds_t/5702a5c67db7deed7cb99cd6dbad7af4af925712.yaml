@@ -13,62 +13,66 @@ my: 1
 # You typed
 method: cubic
 # Create parallel Derivative!
-# DS: High order grid gen  took: 0.00046288
-# DS: Computing all points took: 0.0949041
-# DS: Multiplication PI    took: 0.00455536
+# Interpolation method: "cubic" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.00236347
+# DS: Computing all points took: 0.0446072
+# DS: Multiplication PI    took: 0.020823
 # TEST NEU Boundary conditions!
 # TEST ADJOINT derivatives do unfortunately not fulfill Neumann BC!
 Neumann:
-    forward:           0.319962
-    backward:          0.319962
-    forward2:          0.162307
-    backward2:         0.162307
-    centered:          0.0820934
-    centered_bc_along: 0.0798593
-    dss:               0.115729
-    dss_bc_along:      0.106083
-    divForward:        0.320007
-    divBackward:       0.320007
-    divCentered:       0.0821406
-    directLap:         0.115738
-    directLap_bc_along: 0.106075
-#Number of BICGSTABl iterations: 8
-#Took                          : 0.0178172
-    invCenteredLap:    0.0011508
+    forward:           0.319905
+    backward:          0.319905
+    forward2:          0.16202
+    backward2:         0.16202
+    centered:          0.0825541
+    centered_bc_along: 0.0802758
+    dss:               0.116479
+    dss_bc_along:      0.106715
+    divForward:        0.31995
+    divBackward:       0.31995
+    divCentered:       0.0826008
+    directLap:         0.116488
+    directLap_bc_along: 0.105675
+#Number of BICGSTABl iterations: 3
+#Took                          : 0.00698285
+    invCenteredLap:    0.00113544
 # Reconstruct parallel derivative!
-# DS: High order grid gen  took: 0.000458976
-# DS: Computing all points took: 0.0941336
-# DS: Multiplication PI    took: 0.00440579
+# Interpolation method: "cubic" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.000488934
+# DS: Computing all points took: 0.0345966
+# DS: Multiplication PI    took: 0.016906
 # TEST DIR Boundary conditions!
 Dirichlet: 
-    forward:           0.319609
-    backward:          0.319609
-    forward2:          0.160938
-    backward2:         0.160938
-    centered:          0.0804543
-    centered_bc_along: 0.0783503
-    dss:               0.129268
-    dss_bc_along:      0.103608
-    divForward:        0.319655
-    divBackward:       0.319655
-    divCentered:       0.0805037
-    directLap:         0.129276
-    directLap_bc_along: 0.103591
-#Number of BICGSTABl iterations: 9
-#Took                          : 0.0197703
-    invCenteredLap:    0.00109145
+    forward:           0.319552
+    backward:          0.319552
+    forward2:          0.160696
+    backward2:         0.160696
+    centered:          0.0808774
+    centered_bc_along: 0.0787812
+    dss:               0.13022
+    dss_bc_along:      0.10608
+    divForward:        0.319598
+    divBackward:       0.319598
+    divCentered:       0.0809265
+    directLap:         0.130228
+    directLap_bc_along: 0.104892
+#Number of BICGSTABl iterations: 3
+#Took                          : 0.00537767
+    invCenteredLap:    0.00127773
 # TEST FIELDALIGNED EVALUATION of a Gaussian
-# took 0.299481s
-# Norm Centered Derivative 0.0924364 (compare with that of ds_mpit)
-# took 0.00356182s
-# Norm Centered Derivative 0.0925207 (compare with that of ds_mpit)
+# took 0.233762s
+# Norm Centered Derivative 0.0922708 (compare with that of ds_mpit)
+# took 0.0195581s
+# Norm Centered Derivative 0.0923422 (compare with that of ds_mpit)
 # TEST STAGGERED GRID DERIVATIVE
-# DS: High order grid gen  took: 0.000457728
-# DS: Computing all points took: 0.0633391
-# DS: Multiplication PI    took: 0.00403558
+# Interpolation method: "cubic" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.000485982
+# DS: Computing all points took: 0.0200612
+# DS: Multiplication PI    took: 0.0154832
+Time: 0.000418458 #	 36.5594GB/s
 NeumannST:
-    forward:           0.0801272
-    backward:          0.0801272
+    forward:           0.0809349
+    backward:          0.0809349
 DirichletST:
-    forward:           0.0788615
-    backward:          0.0788615
+    forward:           0.0797108
+    backward:          0.0797108

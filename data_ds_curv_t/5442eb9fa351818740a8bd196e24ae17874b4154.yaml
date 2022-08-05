@@ -13,29 +13,33 @@ my: 1
 method: linear
 # Constructing Grid...
 # Constructing Fieldlines...
-# Construction took 4.14839s
+# Interpolation method: "linear" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 2.5886
+# DS: Computing all points took: 0.0816402
+# DS: Multiplication PI    took: 0.01336
+# Construction took 3.80271s
 Flux:
-    forward:           0.225709
-    forward_vol:                       0.111096
-    backward:          0.225667
-    backward_vol:                      -0.159538
-    centered:          0.0472269
-    centered_vol:                      -0.0242211
-    dss:               0.050526
-    dss_vol:                           -5.31668e-05
-    divForward:        0.240062
-    divForward_vol:                    -0.00156189
-    divBackward:       0.240614
-    divBackward_vol:                   0.00564221
-    divCentered:       0.0541561
-    divCentered_vol:                   0.00204016
-    directLap:         0.0537957
-    directLap_vol:                     -4.05553e-05
-#Number of BICGSTABl iterations: 9
-#Took                          : 0.0247995
-    invCenteredLap:    0.000266403
-    invCenteredLap_vol:                -9.46821e-05
+    forward:           0.224383
+    forward_vol:                       0.113336
+    backward:          0.22429
+    backward_vol:                      -0.161186
+    centered:          0.0475857
+    centered_vol:                      -0.0239252
+    dss:               0.0399488
+    dss_vol:                           -3.84782e-05
+    divForward:        0.238853
+    divForward_vol:                    0.000472188
+    divBackward:       0.23938
+    divBackward_vol:                   0.00369394
+    divCentered:       0.0544759
+    divCentered_vol:                   0.00208306
+    directLap:         0.0442224
+    directLap_vol:                     -2.50974e-05
+#Number of BICGSTABl iterations: 3
+#Took                          : 0.0126426
+    invCenteredLap:    1.15465e-07
+    invCenteredLap_vol:                -2.5097e-05
 # TEST VOLUME FORMS
 volume_error:
-    minus:             9.93141e-06
-    plus:              9.75156e-06
+    minus:             9.93336e-06
+    plus:              9.75394e-06

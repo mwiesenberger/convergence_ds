@@ -13,29 +13,33 @@ my: 100
 method: dg
 # Constructing Grid...
 # Constructing Fieldlines...
-# Construction took 4.177s
+# Interpolation method: "dg" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 2.5666
+# DS: Computing all points took: 0.0966937
+# DS: Multiplication PI    took: 0.136358
+# Construction took 3.8784s
 Flux:
     forward:           0.432126
-    forward_vol:                       0.175821
+    forward_vol:                       0.175824
     backward:          0.432335
     backward_vol:                      -0.358561
     centered:          0.169682
-    centered_vol:                      -0.0913696
+    centered_vol:                      -0.0913684
     dss:               0.1276
-    dss_vol:                           -7.61469e-05
+    dss_vol:                           -7.61372e-05
     divForward:        0.459078
-    divForward_vol:                    0.00666369
+    divForward_vol:                    0.00666659
     divBackward:       0.461137
-    divBackward_vol:                   0.000487529
+    divBackward_vol:                   0.000487557
     divCentered:       0.192603
-    divCentered_vol:                   0.00357561
+    divCentered_vol:                   0.00357707
     directLap:         0.142529
-    directLap_vol:                     -2.3424e-05
-#Number of BICGSTABl iterations: 11
-#Took                          : 0.016688
+    directLap_vol:                     -2.34145e-05
+#Number of BICGSTABl iterations: 36
+#Took                          : 0.0260094
     invCenteredLap:    0.00125325
-    invCenteredLap_vol:                -0.0204823
+    invCenteredLap_vol:                -0.0204829
 # TEST VOLUME FORMS
 volume_error:
-    minus:             8.10525e-05
-    plus:              7.6538e-05
+    minus:             8.10488e-05
+    plus:              7.65381e-05

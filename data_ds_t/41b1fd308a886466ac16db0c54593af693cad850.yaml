@@ -12,3 +12,67 @@ my: 1
 # Type method (dg, nearest, linear, cubic) 
 # You typed
 method: cubic
+# Create parallel Derivative!
+# Interpolation method: "cubic" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.00234271
+# DS: Computing all points took: 0.309616
+# DS: Multiplication PI    took: 0.262121
+# TEST NEU Boundary conditions!
+# TEST ADJOINT derivatives do unfortunately not fulfill Neumann BC!
+Neumann:
+    forward:           0.0405799
+    backward:          0.0405799
+    forward2:          0.00342989
+    backward2:         0.00342989
+    centered:          0.00151445
+    centered_bc_along: 0.00150676
+    dss:               0.00254995
+    dss_bc_along:      0.00494435
+    divForward:        0.0405855
+    divBackward:       0.0405855
+    divCentered:       0.00151554
+    directLap:         0.00255053
+    directLap_bc_along: 0.0134976
+#Number of BICGSTABl iterations: 12
+#Took                          : 5.12481
+    invCenteredLap:    2.19124e-05
+# Reconstruct parallel derivative!
+# Interpolation method: "cubic" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.000493516
+# DS: Computing all points took: 0.257083
+# DS: Multiplication PI    took: 0.231125
+# TEST DIR Boundary conditions!
+Dirichlet: 
+    forward:           0.0405643
+    backward:          0.0405643
+    forward2:          0.00321209
+    backward2:         0.00321209
+    centered:          0.00173646
+    centered_bc_along: 0.001483
+    dss:               0.0263485
+    dss_bc_along:      0.00777419
+    divForward:        0.0405699
+    divBackward:       0.0405699
+    divCentered:       0.00173733
+    directLap:         0.026351
+    directLap_bc_along: 0.0143887
+#Number of BICGSTABl iterations: 15
+#Took                          : 6.41718
+    invCenteredLap:    8.54514e-05
+# TEST FIELDALIGNED EVALUATION of a Gaussian
+# took 24.9134s
+# Norm Centered Derivative 0.100803 (compare with that of ds_mpit)
+# took 20.1599s
+# Norm Centered Derivative 0.100662 (compare with that of ds_mpit)
+# TEST STAGGERED GRID DERIVATIVE
+# Interpolation method: "cubic" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.00045783
+# DS: Computing all points took: 0.213559
+# DS: Multiplication PI    took: 0.217686
+Time: 0.117501 #	 16.6656GB/s
+NeumannST:
+    forward:           0.00169076
+    backward:          0.00169076
+DirichletST:
+    forward:           0.00175066
+    backward:          0.00175066

@@ -13,9 +13,10 @@ my: 10
 # You typed
 method: dg
 # Create parallel Derivative!
-# DS: High order grid gen  took: 0.000461824
-# DS: Computing all points took: 0.123766
-# DS: Multiplication PI    took: 0.200019
+# Interpolation method: "dg" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.00320689
+# DS: Computing all points took: 0.0922333
+# DS: Multiplication PI    took: 0.198186
 # TEST NEU Boundary conditions!
 # TEST ADJOINT derivatives do unfortunately not fulfill Neumann BC!
 Neumann:
@@ -32,13 +33,14 @@ Neumann:
     divCentered:       0.269826
     directLap:         0.24647
     directLap_bc_along: 0.244277
-#Number of BICGSTABl iterations: 6
-#Took                          : 0.00872464
+#Number of BICGSTABl iterations: 18
+#Took                          : 0.00812335
     invCenteredLap:    0.00266998
 # Reconstruct parallel derivative!
-# DS: High order grid gen  took: 0.000456704
-# DS: Computing all points took: 0.111852
-# DS: Multiplication PI    took: 0.201321
+# Interpolation method: "dg" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.000562393
+# DS: Computing all points took: 0.0719878
+# DS: Multiplication PI    took: 0.192633
 # TEST DIR Boundary conditions!
 Dirichlet: 
     forward:           0.61264
@@ -54,18 +56,20 @@ Dirichlet:
     divCentered:       0.270107
     directLap:         0.242884
     directLap_bc_along: 0.239495
-#Number of BICGSTABl iterations: 7
-#Took                          : 0.00994848
+#Number of BICGSTABl iterations: 24
+#Took                          : 0.01106
     invCenteredLap:    0.00255328
 # TEST FIELDALIGNED EVALUATION of a Gaussian
-# took 0.0533441s
+# took 0.0638838s
 # Norm Centered Derivative 0.075813 (compare with that of ds_mpit)
-# took 0.00162592s
+# took 0.00404816s
 # Norm Centered Derivative 0.0758131 (compare with that of ds_mpit)
 # TEST STAGGERED GRID DERIVATIVE
-# DS: High order grid gen  took: 0.000456704
-# DS: Computing all points took: 0.100939
-# DS: Multiplication PI    took: 0.208872
+# Interpolation method: "dg" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.000549596
+# DS: Computing all points took: 0.0650476
+# DS: Multiplication PI    took: 0.200852
+Time: 0.000123072 #	 24.2784GB/s
 NeumannST:
     forward:           0.261858
     backward:          0.261858

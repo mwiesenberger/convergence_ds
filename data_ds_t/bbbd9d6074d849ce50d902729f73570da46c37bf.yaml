@@ -13,62 +13,66 @@ my: 10
 # You typed
 method: linear
 # Create parallel Derivative!
-# DS: High order grid gen  took: 0.000480256
-# DS: Computing all points took: 3.29383
-# DS: Multiplication PI    took: 8.02385
+# Interpolation method: "linear" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.00314231
+# DS: Computing all points took: 2.76012
+# DS: Multiplication PI    took: 9.81516
 # TEST NEU Boundary conditions!
 # TEST ADJOINT derivatives do unfortunately not fulfill Neumann BC!
 Neumann:
-    forward:           0.04148
-    backward:          0.0414802
-    forward2:          0.00387173
-    backward2:         0.00386716
-    centered:          0.00161704
-    centered_bc_along: 0.00158859
-    dss:               0.0319868
-    dss_bc_along:      0.0314292
-    divForward:        0.0414853
-    divBackward:       0.0414855
-    divCentered:       0.00161826
-    directLap:         0.0319911
-    directLap_bc_along: 0.0314331
-#Number of BICGSTABl iterations: 29
-#Took                          : 6.42353
-    invCenteredLap:    0.000312374
+    forward:           0.0405761
+    backward:          0.0405761
+    forward2:          0.00347938
+    backward2:         0.00347938
+    centered:          0.001589
+    centered_bc_along: 0.00157865
+    dss:               0.0030237
+    dss_bc_along:      0.00528628
+    divForward:        0.0405817
+    divBackward:       0.0405817
+    divCentered:       0.00159003
+    directLap:         0.00302424
+    directLap_bc_along: 0.0391732
+#Number of BICGSTABl iterations: 12
+#Took                          : 4.15654
+    invCenteredLap:    2.47398e-05
 # Reconstruct parallel derivative!
-# DS: High order grid gen  took: 0.00045584
-# DS: Computing all points took: 3.28005
-# DS: Multiplication PI    took: 7.9899
+# Interpolation method: "linear" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.000569915
+# DS: Computing all points took: 2.57399
+# DS: Multiplication PI    took: 9.78177
 # TEST DIR Boundary conditions!
 Dirichlet: 
-    forward:           0.0414538
-    backward:          0.0414538
-    forward2:          0.00357042
-    backward2:         0.00357029
-    centered:          0.0018258
-    centered_bc_along: 0.00154688
-    dss:               0.0399528
-    dss_bc_along:      0.0308367
-    divForward:        0.0414591
-    divBackward:       0.0414591
-    divCentered:       0.00182664
-    directLap:         0.0399571
-    directLap_bc_along: 0.0308402
-#Number of BICGSTABl iterations: 35
-#Took                          : 7.66658
-    invCenteredLap:    0.000299973
+    forward:           0.0405596
+    backward:          0.0405596
+    forward2:          0.00333273
+    backward2:         0.00333273
+    centered:          0.00183595
+    centered_bc_along: 0.00155639
+    dss:               0.0284447
+    dss_bc_along:      0.015098
+    divForward:        0.0405652
+    divBackward:       0.0405652
+    divCentered:       0.00183677
+    directLap:         0.0284474
+    directLap_bc_along: 0.0404962
+#Number of BICGSTABl iterations: 12
+#Took                          : 4.16278
+    invCenteredLap:    0.000100562
 # TEST FIELDALIGNED EVALUATION of a Gaussian
-# took 34.3536s
-# Norm Centered Derivative 0.100695 (compare with that of ds_mpit)
-# took 4.13268s
-# Norm Centered Derivative 0.100494 (compare with that of ds_mpit)
+# took 24.6594s
+# Norm Centered Derivative 0.100684 (compare with that of ds_mpit)
+# took 13.9568s
+# Norm Centered Derivative 0.100483 (compare with that of ds_mpit)
 # TEST STAGGERED GRID DERIVATIVE
-# DS: High order grid gen  took: 0.000451232
-# DS: Computing all points took: 3.23007
-# DS: Multiplication PI    took: 8.03853
+# Interpolation method: "linear" projection method: "dg" fine grid "dg"
+# DS: High order grid gen  took: 0.000526241
+# DS: Computing all points took: 2.26245
+# DS: Multiplication PI    took: 9.58522
+Time: 0.0960488 #	 20.3877GB/s
 NeumannST:
-    forward:           0.00191902
-    backward:          0.00191902
+    forward:           0.00182101
+    backward:          0.00182101
 DirichletST:
-    forward:           0.00204848
-    backward:          0.00204848
+    forward:           0.00195516
+    backward:          0.00195516
