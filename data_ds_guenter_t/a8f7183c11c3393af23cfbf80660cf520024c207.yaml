@@ -14,60 +14,60 @@ my: 12
 method: linear-nearest
 # Create parallel Derivative!
 # Interpolation method: "linear" projection method: "nearest" fine grid "dg"
-# DS: High order grid gen  took: 0.00320729
-# DS: Computing all points took: 15.0292
-# DS: Multiplication PI    took: 62.3192
+# DS: High order grid gen  took: 0.00323752
+# DS: Computing all points took: 14.9036
+# DS: Multiplication PI    took: 61.2701
 # TEST Guenter (No Boundary conditions)!
 Guenter : #rel_Error rel_Volume_integral(should be zero for div and Lap)
-    forward:           0.039141
-    forward_vol:                       -0.000135495
-    backward:          0.0391413
-    backward_vol:                      0.000128557
-    forward2:          0.00233645
-    forward2_vol:                      6.60655e-06
-    backward2:         0.00232403
-    backward2_vol:                     7.2608e-06
-    centered:          0.00107241
-    centered_vol:                      -3.46899e-06
-    dss:               0.000687426
-    dss_vol:                           -0.000103816
-    centered_bc_along: 0.00107241
-    centered_bc_along_vol:             -3.46899e-06
-    dss_bc_along:      0.000687426
-    dss_bc_along_vol:                  -0.000103816
-    divForward:        0.0393065
-    divForward_vol:                    1.77123e-07
-    divBackward:       0.039308
-    divBackward_vol:                   -1.76163e-07
-    divCentered:       0.0010931
-    divCentered_vol:                   4.8015e-10
-    directLap:         0.000660371
-    directLap_vol:                     1.56342e-06
+    forward:           0.0817209
+    forward_vol:                       0.0570765
+    backward:          0.0817213
+    backward_vol:                      0.0593136
+    forward2:          0.00956273
+    forward2_vol:                      0.0582291
+    backward2:         0.00956247
+    backward2_vol:                     0.0582313
+    centered:          0.004783
+    centered_vol:                      0.058195
+    dss:               0.00260862
+    dss_vol:                           -0.00927122
+    centered_bc_along: 0.004783
+    centered_bc_along_vol:             0.058195
+    dss_bc_along:      0.00260862
+    dss_bc_along_vol:                  -0.00927122
+    divForward:        0.0819147
+    divForward_vol:                    1.82764e-07
+    divBackward:       0.0821488
+    divBackward_vol:                   -1.899e-07
+    divCentered:       0.00488237
+    divCentered_vol:                   -3.56839e-09
+    directLap:         0.00264883
+    directLap_vol:                     1.24439e-06
 # TEST TOTAL VARIATION DIMINISHING
-# mass before: 6.28319
-# mass after   6.28319
-    Tp_mass_err:   2.37398e-08
-# l2 norm before: 3.30013
-# l2 norm after   3.30006
-    Tp_l2_err:   -1.97065e-05
-# variation before: 56.6774
-# error variation before: 1.65105e-05
-# variation after   56.5509
-# error variation after : 0.0223729
-    Tp_TV_err: -0.00223331
+# mass before: 57.499
+# mass after   57.4989
+    Tp_mass_err:   -1.15122e-06
+# l2 norm before: 10.4706
+# l2 norm after   10.4705
+    Tp_l2_err:   -8.74046e-06
+# variation before: 81.3159
+# error variation before: 5.80448e-06
+# variation after   81.1798
+# error variation after : 0.0173681
+    Tp_TV_err: -0.00167354
 # TEST STAGGERED GRID DERIVATIVE
 # Interpolation method: "linear" projection method: "nearest" fine grid "dg"
-# DS: High order grid gen  took: 0.000543419
-# DS: Computing all points took: 14.6922
-# DS: Multiplication PI    took: 62.2025
-    centeredST:        0.00112513
-    centeredST_vol:                    -1.00476e-05
-    directLapST:       0.000676554
-    directLapST_vol:                   1.56343e-06
-    staggeredLapST:    0.00078696
-    staggeredLapST_vol:                1.68768e-09
+# DS: High order grid gen  took: 0.000540138
+# DS: Computing all points took: 14.4548
+# DS: Multiplication PI    took: 60.8829
+    centeredST:        0.00475066
+    centeredST_vol:                    0.0581824
+    directLapST:       0.00267008
+    directLapST_vol:                   1.24436e-06
+    staggeredLapST:    0.00267948
+    staggeredLapST_vol:                3.11716e-09
 # TEST Inverse of I^+ is I^-
-    IpIm:              0.000347578
+    IpIm:              0.000223461
 # TEST VOLUME FORMS
 volume_error:
     minus:             1.88477e-16

@@ -14,31 +14,31 @@ method: dg
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "dg" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 3.8746
-# DS: Computing all points took: 0.344477
-# DS: Multiplication PI    took: 0.0104506
-# Construction took 5.62392s
+# DS: High order grid gen  took: 3.9685
+# DS: Computing all points took: 0.345902
+# DS: Multiplication PI    took: 0.0104834
+# Construction took 5.77589s
 Flux:
-    forward:           0.0563903
-    forward_vol:                       0.0340293
-    backward:          0.0563941
-    backward_vol:                      -0.0369989
-    centered:          0.00299793
-    centered_vol:                      -0.00148482
-    dss:               0.00254416
-    dss_vol:                           -3.21545e-06
-    divForward:        0.0601909
-    divForward_vol:                    0.000721896
-    divBackward:       0.0602277
-    divBackward_vol:                   0.000621844
-    divCentered:       0.00348602
-    divCentered_vol:                   0.00067187
-    directLap:         0.00285746
-    directLap_vol:                     -2.88471e-06
-#Number of BICGSTABl iterations: 21
-#Took                          : 0.635863
-    invCenteredLap:    1.93766e-05
-    invCenteredLap_vol:                9.66064e-06
+    forward:           0.0832472
+    forward_vol:                       0.0128425
+    backward:          0.0832077
+    backward_vol:                      -0.0144302
+    centered:          0.00511465
+    centered_vol:                      -0.000793864
+    dss:               0.00276776
+    dss_vol:                           2.55153e-07
+    divForward:        0.0837298
+    divForward_vol:                    0.000166526
+    divBackward:       0.0832724
+    divBackward_vol:                   0.000120059
+    divCentered:       0.00521977
+    divCentered_vol:                   0.000143293
+    directLap:         0.00276079
+    directLap_vol:                     3.39992e-07
+#Number of BICGSTABl iterations: 18
+#Took                          : 0.552789
+    invCenteredLap:    4.6752e-06
+    invCenteredLap_vol:                3.71203e-05
 # TEST VOLUME FORMS
 volume_error:
     minus:             1.53686e-07

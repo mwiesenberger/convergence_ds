@@ -14,31 +14,31 @@ method: dg
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "dg" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 3.87562
-# DS: Computing all points took: 0.363772
-# DS: Multiplication PI    took: 0.0982484
-# Construction took 5.73653s
+# DS: High order grid gen  took: 3.90296
+# DS: Computing all points took: 0.361355
+# DS: Multiplication PI    took: 0.097627
+# Construction took 5.77519s
 Flux:
-    forward:           0.0563904
-    forward_vol:                       0.0340102
-    backward:          0.0563939
-    backward_vol:                      -0.0370097
-    centered:          0.00299811
-    centered_vol:                      -0.00149978
-    dss:               0.00247328
-    dss_vol:                           -3.48199e-06
-    divForward:        0.0601911
-    divForward_vol:                    0.000702659
-    divBackward:       0.0602274
-    divBackward_vol:                   0.000611277
-    divCentered:       0.00348631
-    divCentered_vol:                   0.000656968
-    directLap:         0.00279784
-    directLap_vol:                     -3.15607e-06
-#Number of BICGSTABl iterations: 21
-#Took                          : 0.63813
-    invCenteredLap:    1.93766e-05
-    invCenteredLap_vol:                6.86855e-06
+    forward:           0.0832474
+    forward_vol:                       0.0128526
+    backward:          0.0832075
+    backward_vol:                      -0.0144256
+    centered:          0.00511472
+    centered_vol:                      -0.000786513
+    dss:               0.00276696
+    dss_vol:                           4.0913e-07
+    divForward:        0.08373
+    divForward_vol:                    0.000176681
+    divBackward:       0.0832722
+    divBackward_vol:                   0.000124632
+    divCentered:       0.00521987
+    divCentered_vol:                   0.000150656
+    directLap:         0.00276007
+    directLap_vol:                     4.96047e-07
+#Number of BICGSTABl iterations: 15
+#Took                          : 0.464714
+    invCenteredLap:    4.67521e-06
+    invCenteredLap_vol:                5.95822e-05
 # TEST VOLUME FORMS
 volume_error:
     minus:             1.53686e-07

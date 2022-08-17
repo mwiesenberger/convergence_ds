@@ -14,31 +14,31 @@ method: linear
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "linear" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 2.61386
-# DS: Computing all points took: 0.0630618
-# DS: Multiplication PI    took: 0.410815
-# Construction took 4.96831s
+# DS: High order grid gen  took: 2.6002
+# DS: Computing all points took: 0.0608602
+# DS: Multiplication PI    took: 0.0678016
+# Construction took 3.8226s
 Flux:
-    forward:           0.431933
-    forward_vol:                       0.175284
-    backward:          0.431243
-    backward_vol:                      -0.356302
-    centered:          0.172621
-    centered_vol:                      -0.0905087
-    dss:               0.131215
-    dss_vol:                           -8.17107e-05
-    divForward:        0.458577
-    divForward_vol:                    0.00684399
-    divBackward:       0.460031
-    divBackward_vol:                   0.000630029
-    divCentered:       0.195097
-    divCentered_vol:                   0.00373701
-    directLap:         0.145974
-    directLap_vol:                     -2.34073e-05
+    forward:           0.628614
+    forward_vol:                       0.0588078
+    backward:          0.626396
+    backward_vol:                      -0.160919
+    centered:          0.287653
+    centered_vol:                      -0.0510555
+    dss:               0.161298
+    dss_vol:                           3.3752e-06
+    divForward:        0.642696
+    divForward_vol:                    0.00321682
+    divBackward:       0.61638
+    divBackward_vol:                   -0.000197503
+    divCentered:       0.291666
+    divCentered_vol:                   0.00150966
+    directLap:         0.160547
+    directLap_vol:                     4.40023e-06
 #Number of BICGSTABl iterations: 3
-#Took                          : 0.00309495
-    invCenteredLap:    3.81143e-07
-    invCenteredLap_vol:                -2.33202e-05
+#Took                          : 0.00676444
+    invCenteredLap:    1.21053e-06
+    invCenteredLap_vol:                4.41487e-06
 # TEST VOLUME FORMS
 volume_error:
     minus:             8.10488e-05
