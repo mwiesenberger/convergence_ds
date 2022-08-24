@@ -14,32 +14,28 @@ method: linear
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "linear" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 2.57624
-# DS: Computing all points took: 0.0501698
-# DS: Multiplication PI    took: 0.00425698
-# Construction took 3.72954s
+# DS: High order grid gen  took: 1.73907
+# DS: Computing all points took: 0.084147
+# DS: Multiplication PI    took: 0.004646
+# Construction took 2.54923s
 Flux:
-    forward:           1.05729
-    forward_vol:                       0.0310614
-    backward:          1.05081
-    backward_vol:                      -0.411799
-    centered:          0.810834
-    centered_vol:                      -0.190369
-    dss:               0.500778
-    dss_vol:                           -8.50182e-06
-    divForward:        1.09678
-    divForward_vol:                    0.00781503
-    divBackward:       1.01823
-    divBackward_vol:                   -0.00842318
-    divCentered:       0.814772
-    divCentered_vol:                   -0.000304076
-    directLap:         0.498377
-    directLap_vol:                     -6.18711e-07
-#Number of BICGSTABl iterations: 3
-#Took                          : 0.0019622
-    invCenteredLap:    3.75633e-06
-    invCenteredLap_vol:                -1.14869e-06
+    forward:           1.05226
+    forward_vol:                       0.0198719
+    backward:          1.05251
+    backward_vol:                      -0.0118037
+    centered:          0.805287
+    centered_vol:                      0.00403408
+    dss:               0.500094
+    dss_vol:                           -0.000490217
+    divForward:        1.03369
+    divForward_vol:                    -0.0170356
+    divBackward:       1.07853
+    divBackward_vol:                   0.00777034
+    divCentered:       0.80993
+    divCentered_vol:                   -0.00463266
+    directLap:         0.503083
+    directLap_vol:                     -1.47783e-05
 # TEST VOLUME FORMS
 volume_error:
-    minus:             0.000528793
-    plus:              0.000660616
+    minus:             0.0093543
+    plus:              0.00935432

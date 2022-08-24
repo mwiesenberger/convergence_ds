@@ -14,32 +14,28 @@ method: dg
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "dg" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 2.71031
-# DS: Computing all points took: 0.0612194
-# DS: Multiplication PI    took: 0.0155974
-# Construction took 3.88928s
+# DS: High order grid gen  took: 1.65692
+# DS: Computing all points took: 0.088181
+# DS: Multiplication PI    took: 0.017531
+# Construction took 2.48104s
 Flux:
-    forward:           0.62882
-    forward_vol:                       0.0610265
-    backward:          0.626534
-    backward_vol:                      -0.158549
-    centered:          0.287217
-    centered_vol:                      -0.0487612
-    dss:               0.160705
-    dss_vol:                           3.11827e-06
-    divForward:        0.642991
-    divForward_vol:                    0.00312554
-    divBackward:       0.616431
-    divBackward_vol:                   -0.000136325
-    divCentered:       0.291243
-    divCentered_vol:                   0.00149461
-    directLap:         0.15995
-    directLap_vol:                     3.66573e-06
-#Number of BICGSTABl iterations: 33
-#Took                          : 0.0277363
-    invCenteredLap:    0.000402304
-    invCenteredLap_vol:                -0.00200471
+    forward:           0.622267
+    forward_vol:                       0.00927918
+    backward:          0.622276
+    backward_vol:                      -0.00735483
+    centered:          0.278608
+    centered_vol:                      0.000962173
+    dss:               0.158099
+    dss_vol:                           -9.46895e-05
+    divForward:        0.616456
+    divForward_vol:                    -0.00368036
+    divBackward:       0.631928
+    divBackward_vol:                   0.00236731
+    divCentered:       0.283017
+    divCentered_vol:                   -0.000656526
+    directLap:         0.160014
+    directLap_vol:                     1.23423e-07
 # TEST VOLUME FORMS
 volume_error:
-    minus:             8.10488e-05
-    plus:              7.65381e-05
+    minus:             0.00115157
+    plus:              0.00115157

@@ -14,32 +14,28 @@ method: linear
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "linear" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 3.11181
-# DS: Computing all points took: 0.158474
-# DS: Multiplication PI    took: 0.0254785
-# Construction took 4.45613s
+# DS: High order grid gen  took: 2.46144
+# DS: Computing all points took: 0.180066
+# DS: Multiplication PI    took: 0.032144
+# Construction took 3.51166s
 Flux:
-    forward:           0.166101
-    forward_vol:                       0.0233659
-    backward:          0.16596
-    backward_vol:                      -0.0301107
-    centered:          0.0204379
-    centered_vol:                      -0.0033724
-    dss:               0.011126
-    dss_vol:                           -2.97554e-05
-    divForward:        0.167467
-    divForward_vol:                    -0.000149605
-    divBackward:       0.165681
-    divBackward_vol:                   0.000758441
-    divCentered:       0.0208423
-    divCentered_vol:                   0.000304418
-    directLap:         0.0110961
-    directLap_vol:                     -2.95982e-05
-#Number of BICGSTABl iterations: 3
-#Took                          : 0.0418339
-    invCenteredLap:    8.3663e-08
-    invCenteredLap_vol:                -2.95957e-05
+    forward:           0.164059
+    forward_vol:                       0.00219416
+    backward:          0.164057
+    backward_vol:                      -0.00204659
+    centered:          0.0197197
+    centered_vol:                      7.37839e-05
+    dss:               0.0108689
+    dss_vol:                           -4.53905e-05
+    divForward:        0.1642
+    divForward_vol:                    -0.000180049
+    divBackward:       0.165247
+    divBackward_vol:                   0.000159009
+    divCentered:       0.0201707
+    divCentered_vol:                   -1.05202e-05
+    directLap:         0.0110396
+    directLap_vol:                     -3.74348e-05
 # TEST VOLUME FORMS
 volume_error:
-    minus:             1.23277e-06
-    plus:              1.22673e-06
+    minus:             1.79029e-05
+    plus:              1.7904e-05

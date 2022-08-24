@@ -1,0 +1,41 @@
+# Test DS on flux grid (No Boundary conditions)!
+# Type n(3), Nx(8), Ny(80), Nz(20)
+# Type multipleX (1) and multipleY (100)!
+# You typed
+n:  3
+Nx: 8
+Ny: 20
+Nz: 10
+mx: 1
+my: 10
+# Type method (dg, nearest, linear, cubic) 
+# You typed
+method: linear-nearest
+# Constructing Grid...
+# Constructing Fieldlines...
+# Interpolation method: "linear" projection method: "nearest" fine grid "dg"
+# DS: High order grid gen  took: 1.65059
+# DS: Computing all points took: 0.124184
+# DS: Multiplication PI    took: 0.174992
+# Construction took 2.65816s
+Flux:
+    forward:           0.622054
+    forward_vol:                       0.00933803
+    backward:          0.622038
+    backward_vol:                      -0.00726233
+    centered:          0.279222
+    centered_vol:                      0.00103785
+    dss:               0.159144
+    dss_vol:                           -0.00011165
+    divForward:        0.61629
+    divForward_vol:                    -0.00367664
+    divBackward:       0.631645
+    divBackward_vol:                   0.00237072
+    divCentered:       0.283649
+    divCentered_vol:                   -0.000652959
+    directLap:         0.161105
+    directLap_vol:                     1.21454e-07
+# TEST VOLUME FORMS
+volume_error:
+    minus:             0.00115157
+    plus:              0.00115157

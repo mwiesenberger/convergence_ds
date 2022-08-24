@@ -14,32 +14,28 @@ method: linear
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "linear" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 3.90318
-# DS: Computing all points took: 0.348178
-# DS: Multiplication PI    took: 0.042574
-# Construction took 5.7686s
+# DS: High order grid gen  took: 3.71448
+# DS: Computing all points took: 0.374771
+# DS: Multiplication PI    took: 0.051015
+# Construction took 5.38508s
 Flux:
-    forward:           0.0832671
-    forward_vol:                       0.0124532
-    backward:          0.0832422
-    backward_vol:                      -0.0142703
-    centered:          0.00523285
-    centered_vol:                      -0.000908527
-    dss:               0.00336527
-    dss_vol:                           -3.01033e-05
-    divForward:        0.0837438
-    divForward_vol:                    -0.000104356
-    divBackward:       0.083311
-    divBackward_vol:                   0.000400314
-    divCentered:       0.00533355
-    divCentered_vol:                   0.000147979
-    directLap:         0.00336202
-    directLap_vol:                     -3.00375e-05
-#Number of BICGSTABl iterations: 3
-#Took                          : 0.219139
-    invCenteredLap:    2.53437e-08
-    invCenteredLap_vol:                -3.00279e-05
+    forward:           0.0822589
+    forward_vol:                       0.00108607
+    backward:          0.0822575
+    backward_vol:                      -0.00103589
+    centered:          0.00529728
+    centered_vol:                      2.5088e-05
+    dss:               0.00335236
+    dss_vol:                           -3.98837e-05
+    divForward:        0.0824799
+    divForward_vol:                    -3.92228e-05
+    divBackward:       0.0827326
+    divBackward_vol:                   3.66997e-05
+    divCentered:       0.0054112
+    divCentered_vol:                   -1.26156e-06
+    directLap:         0.00338208
+    directLap_vol:                     -3.70469e-05
 # TEST VOLUME FORMS
 volume_error:
-    minus:             1.53686e-07
-    plus:              1.53605e-07
+    minus:             2.23462e-06
+    plus:              2.23381e-06

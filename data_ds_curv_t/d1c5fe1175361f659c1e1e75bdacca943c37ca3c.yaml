@@ -14,32 +14,28 @@ method: dg
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "dg" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 2.57267
-# DS: Computing all points took: 0.155417
-# DS: Multiplication PI    took: 0.271051
-# Construction took 4.12606s
+# DS: High order grid gen  took: 2.02601
+# DS: Computing all points took: 0.223296
+# DS: Multiplication PI    took: 0.34696
+# Construction took 3.3283s
 Flux:
-    forward:           0.328548
-    forward_vol:                       0.0421813
-    backward:          0.327926
-    backward_vol:                      -0.0671696
-    centered:          0.0792394
-    centered_vol:                      -0.0124942
-    dss:               0.043199
-    dss_vol:                           1.68236e-06
-    divForward:        0.332884
-    divForward_vol:                    0.00103838
-    divBackward:       0.325741
-    divBackward_vol:                   0.0002145
-    divCentered:       0.0807183
-    divCentered_vol:                   0.00062644
-    directLap:         0.0430396
-    directLap_vol:                     1.91612e-06
-#Number of BICGSTABl iterations: 27
-#Took                          : 0.0466105
-    invCenteredLap:    6.56225e-05
-    invCenteredLap_vol:                -5.29399e-05
+    forward:           0.324555
+    forward_vol:                       0.00443937
+    backward:          0.324557
+    backward_vol:                      -0.0039556
+    centered:          0.0759579
+    centered_vol:                      0.000241887
+    dss:               0.0421478
+    dss_vol:                           -2.40717e-05
+    divForward:        0.323664
+    divForward_vol:                    -0.000832723
+    divBackward:       0.327844
+    divBackward_vol:                   0.000664374
+    divCentered:       0.077561
+    divCentered_vol:                   -8.41745e-05
+    directLap:         0.0427867
+    directLap_vol:                     -3.05679e-07
 # TEST VOLUME FORMS
 volume_error:
-    minus:             9.93336e-06
-    plus:              9.75394e-06
+    minus:             0.000143355
+    plus:              0.000143361

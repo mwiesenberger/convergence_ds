@@ -14,32 +14,28 @@ method: dg
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "dg" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 2.57639
-# DS: Computing all points took: 0.0522152
-# DS: Multiplication PI    took: 0.00803261
-# Construction took 3.72545s
+# DS: High order grid gen  took: 1.72241
+# DS: Computing all points took: 0.0839
+# DS: Multiplication PI    took: 0.008707
+# Construction took 2.55003s
 Flux:
-    forward:           1.05772
-    forward_vol:                       0.0371224
-    backward:          1.05126
-    backward_vol:                      -0.396566
-    centered:          0.810964
-    centered_vol:                      -0.179722
-    dss:               0.500517
-    dss_vol:                           -8.07536e-06
-    divForward:        1.09753
-    divForward_vol:                    0.0058511
-    divBackward:       1.01845
-    divBackward_vol:                   -0.000466655
-    divCentered:       0.814924
-    divCentered_vol:                   0.00269222
-    directLap:         0.498063
-    directLap_vol:                     -3.20024e-06
-#Number of BICGSTABl iterations: 33
-#Took                          : 0.013533
-    invCenteredLap:    0.00195191
-    invCenteredLap_vol:                -0.201564
+    forward:           1.05302
+    forward_vol:                       0.0197042
+    backward:          1.05317
+    backward_vol:                      -0.0122045
+    centered:          0.805242
+    centered_vol:                      0.00374989
+    dss:               0.499115
+    dss_vol:                           -0.000355682
+    divForward:        1.0344
+    divForward_vol:                    -0.0171795
+    divBackward:       1.07938
+    divBackward_vol:                   0.00771102
+    divCentered:       0.809907
+    divCentered_vol:                   -0.00473426
+    directLap:         0.50205
+    directLap_vol:                     6.1373e-05
 # TEST VOLUME FORMS
 volume_error:
-    minus:             0.000528793
-    plus:              0.000660616
+    minus:             0.0093543
+    plus:              0.00935432

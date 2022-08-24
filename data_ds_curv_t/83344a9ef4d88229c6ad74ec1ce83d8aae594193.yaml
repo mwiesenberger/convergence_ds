@@ -14,32 +14,28 @@ method: dg
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "dg" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 3.13288
-# DS: Computing all points took: 0.170388
-# DS: Multiplication PI    took: 0.0621394
-# Construction took 4.65429s
+# DS: High order grid gen  took: 2.49964
+# DS: Computing all points took: 0.203987
+# DS: Multiplication PI    took: 0.092202
+# Construction took 3.65857s
 Flux:
-    forward:           0.166064
-    forward_vol:                       0.0241521
-    backward:          0.165905
-    backward_vol:                      -0.0304355
-    centered:          0.0203261
-    centered_vol:                      -0.00314167
-    dss:               0.011009
-    dss_vol:                           8.15241e-07
-    divForward:        0.16744
-    divForward_vol:                    0.000406825
-    divBackward:       0.16562
-    divBackward_vol:                   0.000200431
-    divCentered:       0.0207344
-    divCentered_vol:                   0.000303628
-    directLap:         0.0109735
-    directLap_vol:                     9.66319e-07
-#Number of BICGSTABl iterations: 21
-#Took                          : 0.164231
-    invCenteredLap:    1.05411e-05
-    invCenteredLap_vol:                -6.50126e-06
+    forward:           0.164005
+    forward_vol:                       0.00216441
+    backward:          0.164005
+    backward_vol:                      -0.00204315
+    centered:          0.0194131
+    centered_vol:                      6.06324e-05
+    dss:               0.0107119
+    dss_vol:                           -6.36176e-06
+    divForward:        0.164136
+    divForward_vol:                    -0.000197163
+    divBackward:       0.165203
+    divBackward_vol:                   0.000176171
+    divCentered:       0.0198648
+    divCentered_vol:                   -1.04961e-05
+    directLap:         0.010889
+    directLap_vol:                     -3.75798e-07
 # TEST VOLUME FORMS
 volume_error:
-    minus:             1.23277e-06
-    plus:              1.22673e-06
+    minus:             1.79029e-05
+    plus:              1.7904e-05

@@ -14,32 +14,28 @@ method: linear
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "linear" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 2.57856
-# DS: Computing all points took: 0.0801251
-# DS: Multiplication PI    took: 0.0136054
-# Construction took 3.78822s
+# DS: High order grid gen  took: 2.01403
+# DS: Computing all points took: 0.107651
+# DS: Multiplication PI    took: 0.013214
+# Construction took 2.8531s
 Flux:
-    forward:           0.328603
-    forward_vol:                       0.0404182
-    backward:          0.328015
-    backward_vol:                      -0.0668842
-    centered:          0.0794647
-    centered_vol:                      -0.013233
-    dss:               0.0433141
-    dss_vol:                           -2.81357e-05
-    divForward:        0.332915
-    divForward_vol:                    -5.0886e-05
-    divBackward:       0.325846
-    divBackward_vol:                   0.00118269
-    divCentered:       0.0809366
-    divCentered_vol:                   0.0005659
-    directLap:         0.0431607
-    directLap_vol:                     -2.77993e-05
-#Number of BICGSTABl iterations: 3
-#Took                          : 0.0124027
-    invCenteredLap:    3.25429e-07
-    invCenteredLap_vol:                -2.7798e-05
+    forward:           0.324629
+    forward_vol:                       0.00449626
+    backward:          0.324624
+    backward_vol:                      -0.0039596
+    centered:          0.0763721
+    centered_vol:                      0.000268329
+    dss:               0.0423836
+    dss_vol:                           -6.75727e-05
+    divForward:        0.323754
+    divForward_vol:                    -0.000799369
+    divBackward:       0.327898
+    divBackward_vol:                   0.000631559
+    divCentered:       0.0779817
+    divCentered_vol:                   -8.39051e-05
+    directLap:         0.0430313
+    directLap_vol:                     -3.93016e-05
 # TEST VOLUME FORMS
 volume_error:
-    minus:             9.93336e-06
-    plus:              9.75394e-06
+    minus:             0.000143355
+    plus:              0.000143361

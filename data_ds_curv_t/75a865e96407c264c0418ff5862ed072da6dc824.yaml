@@ -14,32 +14,28 @@ method: linear
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "linear" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 2.57153
-# DS: Computing all points took: 0.0843388
-# DS: Multiplication PI    took: 0.0863887
-# Construction took 3.85528s
+# DS: High order grid gen  took: 2.01837
+# DS: Computing all points took: 0.115775
+# DS: Multiplication PI    took: 0.103419
+# Construction took 2.94166s
 Flux:
-    forward:           0.328503
-    forward_vol:                       0.0415405
-    backward:          0.327915
-    backward_vol:                      -0.0678469
-    centered:          0.0794556
-    centered_vol:                      -0.0131532
-    dss:               0.043451
-    dss_vol:                           1.90537e-06
-    divForward:        0.332814
-    divForward_vol:                    0.00105548
-    divBackward:       0.325753
-    divBackward_vol:                   0.000205238
-    divCentered:       0.0809283
-    divCentered_vol:                   0.00063036
-    directLap:         0.04329
-    directLap_vol:                     2.22287e-06
-#Number of BICGSTABl iterations: 3
-#Took                          : 0.0132124
-    invCenteredLap:    3.26404e-07
-    invCenteredLap_vol:                2.22219e-06
+    forward:           0.324511
+    forward_vol:                       0.00446256
+    backward:          0.324504
+    backward_vol:                      -0.00392678
+    centered:          0.0763663
+    centered_vol:                      0.000267888
+    dss:               0.0426712
+    dss_vol:                           -2.88739e-05
+    divForward:        0.323637
+    divForward_vol:                    -0.000832889
+    divBackward:       0.327774
+    divBackward_vol:                   0.000664618
+    divCentered:       0.0779759
+    divCentered_vol:                   -8.41355e-05
+    directLap:         0.0433265
+    directLap_vol:                     1.6081e-07
 # TEST VOLUME FORMS
 volume_error:
-    minus:             9.93336e-06
-    plus:              9.75394e-06
+    minus:             0.000143355
+    plus:              0.000143361

@@ -14,32 +14,28 @@ method: dg
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "dg" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 3.96117
-# DS: Computing all points took: 0.615787
-# DS: Multiplication PI    took: 1.12794
-# Construction took 7.12393s
+# DS: High order grid gen  took: 3.78545
+# DS: Computing all points took: 0.746586
+# DS: Multiplication PI    took: 1.55715
+# Construction took 7.29019s
 Flux:
-    forward:           0.0832474
-    forward_vol:                       0.0128522
-    backward:          0.0832075
-    backward_vol:                      -0.0144255
-    centered:          0.00511472
-    centered_vol:                      -0.000786613
-    dss:               0.002767
-    dss_vol:                           3.9824e-07
-    divForward:        0.08373
-    divForward_vol:                    0.000176359
-    divBackward:       0.0832722
-    divBackward_vol:                   0.000124751
-    divCentered:       0.00521987
-    divCentered_vol:                   0.000150555
-    directLap:         0.00276011
-    directLap_vol:                     4.85144e-07
-#Number of BICGSTABl iterations: 15
-#Took                          : 0.460212
-    invCenteredLap:    4.67521e-06
-    invCenteredLap_vol:                6.33001e-05
+    forward:           0.0822199
+    forward_vol:                       0.00106771
+    backward:          0.0822201
+    backward_vol:                      -0.00103744
+    centered:          0.00488027
+    centered_vol:                      1.51331e-05
+    dss:               0.00268916
+    dss_vol:                           -1.51738e-06
+    divForward:        0.0824335
+    divForward_vol:                    -4.78566e-05
+    divBackward:       0.0827018
+    divBackward_vol:                   4.52227e-05
+    divCentered:       0.00500008
+    divCentered_vol:                   -1.31692e-06
+    directLap:         0.00273633
+    directLap_vol:                     -1.14663e-08
 # TEST VOLUME FORMS
 volume_error:
-    minus:             1.53686e-07
-    plus:              1.53605e-07
+    minus:             2.23462e-06
+    plus:              2.23381e-06

@@ -14,32 +14,28 @@ method: linear
 # Constructing Grid...
 # Constructing Fieldlines...
 # Interpolation method: "linear" projection method: "dg" fine grid "dg"
-# DS: High order grid gen  took: 3.95495
-# DS: Computing all points took: 0.628997
-# DS: Multiplication PI    took: 3.25174
-# Construction took 9.27266s
+# DS: High order grid gen  took: 3.73936
+# DS: Computing all points took: 0.722713
+# DS: Multiplication PI    took: 4.33043
+# Construction took 10.0074s
 Flux:
-    forward:           0.0832416
-    forward_vol:                       0.0127346
-    backward:          0.0832167
-    backward_vol:                      -0.0145452
-    centered:          0.00523202
-    centered_vol:                      -0.000905302
-    dss:               0.00295439
-    dss_vol:                           4.23162e-07
-    divForward:        0.0837188
-    divForward_vol:                    0.000176335
-    divBackward:       0.0832867
-    divBackward_vol:                   0.000124677
-    divCentered:       0.00533277
-    divCentered_vol:                   0.000150506
-    directLap:         0.00294533
-    directLap_vol:                     4.87845e-07
-#Number of BICGSTABl iterations: 3
-#Took                          : 0.239064
-    invCenteredLap:    2.22075e-08
-    invCenteredLap_vol:                4.87831e-07
+    forward:           0.082228
+    forward_vol:                       0.00107742
+    backward:          0.0822266
+    backward_vol:                      -0.00102738
+    centered:          0.0052967
+    centered_vol:                      2.50194e-05
+    dss:               0.00328348
+    dss_vol:                           -2.88676e-06
+    divForward:        0.0824487
+    divForward_vol:                    -4.78572e-05
+    divBackward:       0.0827009
+    divBackward_vol:                   4.52266e-05
+    divCentered:       0.00541063
+    divCentered_vol:                   -1.3153e-06
+    directLap:         0.00332695
+    directLap_vol:                     -1.3673e-09
 # TEST VOLUME FORMS
 volume_error:
-    minus:             1.53686e-07
-    plus:              1.53605e-07
+    minus:             2.23462e-06
+    plus:              2.23381e-06
